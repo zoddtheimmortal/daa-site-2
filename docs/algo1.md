@@ -3654,3 +3654,176 @@ Execution time: 25074950 milliseconds
 
 
 ```
+
+For k=3
+
+```bash
+
+Current alpha: 1906.5
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1906.5
+Current gap: 1906.5
+
+Current alpha: 953.25
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 953.25
+Current gap: 953.25
+
+Current alpha: 476.625
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 476.625
+Current gap: 476.625
+
+Current alpha: 238.312
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 238.312
+Current gap: 238.312
+
+Current alpha: 119.156
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 119.156
+Current gap: 119.156
+
+Current alpha: 59.5781
+Max Flow: 93383
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 59.5781
+Current gap: 59.5781
+
+Current alpha: 89.3672
+Max Flow: 102903
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 89.3672
+Current gap: 29.7891
+
+Current alpha: 104.262
+Max Flow: 106668
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 104.262
+Current gap: 14.8945
+
+Current alpha: 111.709
+Max Flow: 108404
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 111.709
+Current gap: 7.44727
+
+Current alpha: 115.433
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.433
+Current gap: 3.72363
+
+Current alpha: 113.571
+Max Flow: 108768
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 113.571
+Current gap: 1.86182
+
+Current alpha: 114.502
+Max Flow: 108984
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 114.502
+Current gap: 0.930908
+
+Current alpha: 114.967
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 114.967
+Current gap: 0.465454
+
+Current alpha: 115.2
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.2
+Current gap: 0.232727
+
+Current alpha: 115.084
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.084
+Current gap: 0.116364
+
+Current alpha: 115.025
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.025
+Current gap: 0.0581818
+
+Current alpha: 114.996
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 114.996
+Current gap: 0.0290909
+
+Current alpha: 115.011
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.011
+Current gap: 0.0145454
+
+Current alpha: 115.004
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.004
+Current gap: 0.00727272
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 0.00363636
+
+Current alpha: 115.002
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.002
+Current gap: 0.00181818
+
+Current alpha: 115.001
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115.001
+Current gap: 0.00090909
+
+Current alpha: 115
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115
+Current gap: 0.000454545
+
+Current alpha: 115
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115
+Current gap: 0.000227273
+
+Current alpha: 115
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115
+Current gap: 0.000113636
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 5.68181e-005
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 2.84091e-005
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 1.42045e-005
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 7.10227e-006
+
+Current alpha: 115
+Max Flow: 109095
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 115
+Current gap: 3.55113e-006
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 1.77557e-006
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 8.87783e-007
+
+Current alpha: 115
+Max Flow: 109056
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 115
+Current gap: 4.43892e-007
+
+Current alpha: 115
+
+```
