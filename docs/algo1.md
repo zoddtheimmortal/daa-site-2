@@ -82,18 +82,19 @@ using Flow = vector<vector<pair<int,int>>>;
 #include <algorithm>
 
 typedef vector<vector<int>> Graph;
-vector<int> core_decomp;
-int n,m;
 
 void findAllKCliques(const Graph& G, int k, vector<int>& currentClique, int start, vector<vector<int>>& result) {
+
     if (currentClique.size() == static_cast<size_t>(k)) {
         result.push_back(currentClique);
         return;
     }
 
     for (int v = start; v < G.size(); v++) {
+
         bool isConnectedToAll = true;
         for (int u : currentClique) {
+
             bool edgeExists = false;
             for (int neighbor : G[u]) {
                 if (neighbor == v) {
@@ -129,6 +130,7 @@ Graph createGraph(int n, const vector<pair<int, int>>& edges) {
         G[edge.first].push_back(edge.second);
         G[edge.second].push_back(edge.first);
     }
+
     for (auto& neighbors : G) {
         sort(neighbors.begin(), neighbors.end());
     }
@@ -204,22 +206,19 @@ vector<vector<int>> printKCliques(const vector<vector<int>>& k_cliques, ofstream
     outfile << "\nAll " << k << "-cliques (" << k_cliques.size() << " in total):\n";
     for (const auto& clique : k_cliques) {
         vector<int> temp;
-        // outfile << "[";
+        outfile << "[";
         for (size_t i = 0; i < clique.size(); ++i) {
             temp.push_back(clique[i]);
-            // outfile << clique[i];
-            // if (i != clique.size() - 1) {
-            //     outfile << ", ";
-            // }
+            outfile << clique[i];
+            if (i != clique.size() - 1) {
+                outfile << ", ";
+            }
         }
         k_size_cliques.push_back(temp);
-        // outfile << "]\n";
+        outfile << "]\n";
     }
     return k_size_cliques;
 }
-
-
-
 
 bool readGraphFromFile(const string& filename, int& n, vector<pair<int, int>>& edges) {
     ifstream file(filename);
@@ -260,6 +259,7 @@ bool readGraphFromFile(const string& filename, int& n, vector<pair<int, int>>& e
     if (uniqueVertices.size() != static_cast<size_t>(n)) {
         cerr << "Warning: Number of unique vertices (" << uniqueVertices.size()
              << ") doesn't match the specified count (" << n << ")" << endl;
+
         n = uniqueVertices.size();
     }
 
@@ -397,16 +397,16 @@ int fordFulkerson(Flow& graph, int s, int t, vector<bool>& minCut, ofstream& out
         }
     }
 
-    // outfile << "\nResidual Graph after Max Flow:" << endl;
-    // for (int u = 0; u < V; u++) {
-    //     if (!residualGraph[u].empty()) {
-    //         outfile << u << " -> ";
-    //         for (const auto& edge : residualGraph[u]) {
-    //             outfile << "(" << edge.first << "," << edge.second << ") ";
-    //         }
-    //         outfile << endl;
-    //     }
-    // }
+    outfile << "\nResidual Graph after Max Flow:" << endl;
+    for (int u = 0; u < V; u++) {
+        if (!residualGraph[u].empty()) {
+            outfile << u << " -> ";
+            for (const auto& edge : residualGraph[u]) {
+                outfile << "(" << edge.first << "," << edge.second << ") ";
+            }
+            outfile << endl;
+        }
+    }
 
     return maxFlow;
 }
@@ -424,31 +424,10 @@ bool isValidKClique(const Graph& G, const vector<int>& potentialClique) {
     return true;
 }
 
-int findMaxCore() {
-    return *max_element(core_decomp.begin(), core_decomp.end());
-}
-
-vector<int> getVerticesInCore(int k_core) {
-    vector<int> core_vertices;
-    for(int v = 0; v < core_decomp.size(); v++) {
-        if(core_decomp[v] >= k_core) {
-            core_vertices.push_back(v);
-        }
-    }
-    return core_vertices;
-}
-
 void findDensestSubgraph(Graph& G, vector<vector<int>> kSizeCliques, int k, int n, ofstream& outfile) {
     double l = 0;
     vector<int> clique_degree(n, 0);
     find_clique_degrees(kSizeCliques, clique_degree);
-
-    int k_max = findMaxCore();
-    int psi_size = k;
-
-    // Get initial core vertices
-    int initial_core = ceil(l);
-    vector<int> V_core = getVerticesInCore(initial_core);
 
     vector<int> V(G.size());
     for (int i = 0; i < G.size(); i++) {
@@ -462,6 +441,7 @@ void findDensestSubgraph(Graph& G, vector<vector<int>> kSizeCliques, int k, int 
     outfile << "Initial parameters:" << endl;
     outfile << "l: " << l << ", u: " << u << endl;
     outfile << "Number of (k-1)-cliques: " << LAMBDA.size() << endl;
+
     outfile << endl;
 
     double epsilon = 1.0 / (n * (n - 1));
@@ -485,6 +465,7 @@ void findDensestSubgraph(Graph& G, vector<vector<int>> kSizeCliques, int k, int 
         for (int lambda_idx = 0; lambda_idx < LAMBDA.size(); lambda_idx++) {
             const auto& lambda = LAMBDA[lambda_idx];
             for (int v : V) {
+
                 if (find(lambda.begin(), lambda.end(), v) != lambda.end()) {
                     continue;
                 }
@@ -515,44 +496,22 @@ void findDensestSubgraph(Graph& G, vector<vector<int>> kSizeCliques, int k, int 
             }
         }
 
-
         vector<bool> minCut;
         int maxFlow = fordFulkerson(Vf, s, t, minCut, outfile);
         outfile << "Max Flow: " << maxFlow << endl;
 
         outfile << "Min cut (nodes in S side): ";
         for (int i = 0; i < minCut.size(); i++) {
+
         }
 
         outfile << "Vertices in source side: ";
         bool any_vertex_in_cut = false;
         for (int v : V) {
             if (minCut[v + 1]) {
+
                 any_vertex_in_cut = true;
             }
-        }
-
-        bool s_has_more = false;
-        vector<int> current_dense;
-        for (int v : V) {
-            if (minCut[v + 1]) {  // Correct offset for core vertices
-                current_dense.push_back(v);
-                s_has_more = true;
-            }
-        }
-
-        double new_l=l;
-        double new_u=u;
-        double new_best_density = 0;
-        if (s_has_more) {
-            new_l = alpha;
-            double current_den = static_cast<double>(current_dense.size())
-                               / (V.size() * (V.size() - 1));
-            if (current_den > new_best_density) {
-                new_best_density = current_den;
-            }
-        } else {
-            new_u = alpha;
         }
 
         if (!any_vertex_in_cut) {
@@ -615,6 +574,7 @@ void findDensestSubgraph(Graph& G, vector<vector<int>> kSizeCliques, int k, int 
         }
 
         outfile << "Number of edges: " << edge_count << endl;
+        outfile << "Density: " << density << endl;
 
         int clique_count = 0;
         for (const auto& clique : kSizeCliques) {
@@ -633,69 +593,27 @@ void findDensestSubgraph(Graph& G, vector<vector<int>> kSizeCliques, int k, int 
         outfile << "Number of k-cliques in dense subgraph: " << clique_count << endl;
         if (dense_vertices.size() > 0) {
             double avg_cliques = (double)clique_count / dense_vertices.size();
-            outfile << "Average k-cliques per vertex (Density): " << avg_cliques << endl;
+            outfile << "Average k-cliques per vertex: " << avg_cliques << endl;
         }
     }
 }
-
-
-
-vector<int> clique_instances(int v){
-    vector<int> clique_indexes;
-    for (int i = 0; i < k_cliques.size(); i++) {
-        if (find(k_cliques[i].begin(), k_cliques[i].end(), v) != k_cliques[i].end()) {
-            clique_indexes.push_back(i);
-        }
-    }
-    return clique_indexes;
-}
-
-void performCoreDecomp(Graph& G) {
-    vector<int> degree(G.size());
-    find_clique_degrees(k_cliques, degree);
-    vector<int> vertices(G.size());
-    for (int i = 0; i < G.size(); i++) {
-        vertices[i] = i;
-    }
-
-    sort(vertices.begin(), vertices.end(), [&degree](int a, int b) {
-        return degree[a] < degree[b];
-    });
-
-    while(!vertices.empty()) {
-        int v = vertices[0];
-        core_decomp[v] = degree[v];
-
-        vector<int> instances = clique_instances(v);
-        for (int& x : instances) {
-            for (int& y : k_cliques[x]) {
-                if (y != v && degree[y] > degree[v]) {
-                    degree[y]--;
-                }
-            }
-        }
-
-        vertices.erase(vertices.begin());
-
-        sort(vertices.begin(), vertices.end(), [&degree](int a, int b) {
-            return degree[a] < degree[b];
-        });
-    }
-
-}
-
 
 int main() {
+
     vector<string> input_files = {
+        "1ca_hepth.txt",
         "1as_caida_processed.txt",
+
     };
 
     for (const string& input_file : input_files) {
-        for (int k = 3; k<=3; k++) {
-            n=m=0;
-            string output_file = "final_output_" + input_file + "_" + to_string(k) + ".txt";
+        for (int k = 2; k <= 3; k++) {
+            if(k==2 && input_file=="1ca_hepth.txt") continue;
+
+            string output_file = "11final_output_" + input_file + "_" + to_string(k) + ".txt";
 
             vector<pair<int, int>> edges;
+            int n;
 
             if (!readGraphFromFile(input_file, n, edges)) {
                 cerr << "Error reading graph from file: " << input_file << endl;
@@ -711,18 +629,13 @@ int main() {
             outfile << "Graph with " << n << " vertices and " << edges.size() << " edges" << endl;
             outfile << "Looking for cliques of size k = " << k << endl;
 
-
             Graph G = createGraph(n, edges);
 
             auto start_time = high_resolution_clock::now();
             vector<vector<int>> cliques = CLIQUES(G, k);
 
-            core_decomp.resize(n, 0);
-            performCoreDecomp(G);
-
             printCliquesCount(cliques, outfile);
             vector<vector<int>> kSizeCliques = printKCliques(k_cliques, outfile, k);
-
 
             cout << "Found " << k_cliques.size() << " " << k << "-cliques in " << input_file << "." << endl;
 
@@ -747,16 +660,6 @@ int main() {
 For k=2
 
 ```bash
-Graph with 1461 vertices and 2742 edges
-Looking for cliques of size k = 2
-Size 2: 2742
-
-All 2-cliques (2742 in total):
-Initial parameters:
-l: 0, u: 34
-Number of (k-1)-cliques: 1461
-
-
 Current alpha: 17
 Max Flow: 5484
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 17
@@ -850,75 +753,78 @@ Current gap: 0.0001297
 Current alpha: 9.50005
 Max Flow: 5484
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9.50005
-Current gap: 6.48499e-05
+Current gap: 6.48499e-005
 
 Current alpha: 9.50002
 Max Flow: 5484
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9.50002
-Current gap: 3.24249e-05
+Current gap: 3.24249e-005
 
 Current alpha: 9.5
 Max Flow: 5484
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9.5
-Current gap: 1.62125e-05
+Current gap: 1.62125e-005
 
 Current alpha: 9.49999
 Max Flow: 5464
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 9.49999
-Current gap: 8.10623e-06
+Current gap: 8.10623e-006
 
 Current alpha: 9.5
 Max Flow: 5464
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 9.5
-Current gap: 4.05312e-06
+Current gap: 4.05312e-006
 
 Current alpha: 9.5
 Max Flow: 5464
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 9.5
-Current gap: 2.02656e-06
+Current gap: 2.02656e-006
 
 Current alpha: 9.5
 Max Flow: 5464
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 9.5
-Current gap: 1.01328e-06
+Current gap: 1.01328e-006
 
 Current alpha: 9.5
 Max Flow: 5484
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9.5
-Current gap: 5.06639e-07
+Current gap: 5.06639e-007
 
 Current alpha: 9.5
 Max Flow: 5484
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9.5
-Current gap: 2.5332e-07
+Current gap: 2.5332e-007
+
 
 Dense subgraph found with 20 vertices:
-Vertices in dense subgraph: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
+Vertices in dense subgraph: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
 Edges in dense subgraph:
-Vertex 527 connected to: 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 529 connected to: 527 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 823 connected to: 527 529 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1030 connected to: 527 529 823 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1032 connected to: 527 529 823 1030 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1034 connected to: 527 529 823 1030 1032 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1036 connected to: 527 529 823 1030 1032 1034 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1038 connected to: 527 529 823 1030 1032 1034 1036 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1040 connected to: 527 529 823 1030 1032 1034 1036 1038 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1042 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1044 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1046 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1051 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1053 1055 1057 1059 1061 1068 1287
-Vertex 1053 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1055 1057 1059 1061 1068 1287
-Vertex 1055 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1057 1059 1061 1068 1287
-Vertex 1057 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1059 1061 1068 1287
-Vertex 1059 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1061 1068 1287
-Vertex 1061 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1068 1287
-Vertex 1068 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1287
-Vertex 1287 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068
+Vertex 550 connected to: 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 551 connected to: 550 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 552 connected to: 550 551 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 553 connected to: 550 551 552 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 554 connected to: 550 551 552 553 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 555 connected to: 550 551 552 553 554 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 556 connected to: 550 551 552 553 554 555 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 557 connected to: 550 551 552 553 554 555 556 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 558 connected to: 550 551 552 553 554 555 556 557 559 560 561 562 563 564 565 566 567 568 569
+Vertex 559 connected to: 550 551 552 553 554 555 556 557 558 560 561 562 563 564 565 566 567 568 569
+Vertex 560 connected to: 550 551 552 553 554 555 556 557 558 559 561 562 563 564 565 566 567 568 569
+Vertex 561 connected to: 550 551 552 553 554 555 556 557 558 559 560 562 563 564 565 566 567 568 569
+Vertex 562 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 563 564 565 566 567 568 569
+Vertex 563 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 564 565 566 567 568 569
+Vertex 564 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 565 566 567 568 569
+Vertex 565 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 566 567 568 569
+Vertex 566 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 567 568 569
+Vertex 567 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 568 569
+Vertex 568 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 569
+Vertex 569 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568
 Number of edges: 190
+Density: 1
 Number of k-cliques in dense subgraph: 190
 Average k-cliques per vertex: 9.5
-Execution time: 1958 milliseconds
+Execution time: 38098 milliseconds
+
 
 
 ```
@@ -926,16 +832,6 @@ Execution time: 1958 milliseconds
 For k=3
 
 ```bash
-Graph with 1461 vertices and 2742 edges
-Looking for cliques of size k = 3
-Size 3: 3764
-
-All 3-cliques (3764 in total):
-Initial parameters:
-l: 0, u: 173
-Number of (k-1)-cliques: 2742
-
-
 Current alpha: 86.5
 Max Flow: 11292
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 86.5
@@ -1039,75 +935,78 @@ Current gap: 0.000164986
 Current alpha: 57
 Max Flow: 11272
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 57
-Current gap: 8.24928e-05
+Current gap: 8.24928e-005
 
 Current alpha: 57
 Max Flow: 11292
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 57
-Current gap: 4.12464e-05
+Current gap: 4.12464e-005
 
 Current alpha: 57
 Max Flow: 11292
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 57
-Current gap: 2.06232e-05
+Current gap: 2.06232e-005
 
 Current alpha: 57
 Max Flow: 11272
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 57
-Current gap: 1.03116e-05
+Current gap: 1.03116e-005
 
 Current alpha: 57
 Max Flow: 11292
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 57
-Current gap: 5.1558e-06
+Current gap: 5.1558e-006
 
 Current alpha: 57
 Max Flow: 11292
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 57
-Current gap: 2.5779e-06
+Current gap: 2.5779e-006
 
 Current alpha: 57
 Max Flow: 11272
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 57
-Current gap: 1.28895e-06
+Current gap: 1.28895e-006
 
 Current alpha: 57
 Max Flow: 11272
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 57
-Current gap: 6.44475e-07
+Current gap: 6.44475e-007
 
 Current alpha: 57
 Max Flow: 11272
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 57
-Current gap: 3.22238e-07
+Current gap: 3.22238e-007
+
 
 Dense subgraph found with 20 vertices:
-Vertices in dense subgraph: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
+Vertices in dense subgraph: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
 Edges in dense subgraph:
-Vertex 527 connected to: 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 529 connected to: 527 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 823 connected to: 527 529 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1030 connected to: 527 529 823 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1032 connected to: 527 529 823 1030 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1034 connected to: 527 529 823 1030 1032 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1036 connected to: 527 529 823 1030 1032 1034 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1038 connected to: 527 529 823 1030 1032 1034 1036 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1040 connected to: 527 529 823 1030 1032 1034 1036 1038 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1042 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1044 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1046 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1051 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1053 1055 1057 1059 1061 1068 1287
-Vertex 1053 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1055 1057 1059 1061 1068 1287
-Vertex 1055 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1057 1059 1061 1068 1287
-Vertex 1057 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1059 1061 1068 1287
-Vertex 1059 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1061 1068 1287
-Vertex 1061 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1068 1287
-Vertex 1068 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1287
-Vertex 1287 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068
+Vertex 550 connected to: 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 551 connected to: 550 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 552 connected to: 550 551 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 553 connected to: 550 551 552 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 554 connected to: 550 551 552 553 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 555 connected to: 550 551 552 553 554 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 556 connected to: 550 551 552 553 554 555 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 557 connected to: 550 551 552 553 554 555 556 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 558 connected to: 550 551 552 553 554 555 556 557 559 560 561 562 563 564 565 566 567 568 569
+Vertex 559 connected to: 550 551 552 553 554 555 556 557 558 560 561 562 563 564 565 566 567 568 569
+Vertex 560 connected to: 550 551 552 553 554 555 556 557 558 559 561 562 563 564 565 566 567 568 569
+Vertex 561 connected to: 550 551 552 553 554 555 556 557 558 559 560 562 563 564 565 566 567 568 569
+Vertex 562 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 563 564 565 566 567 568 569
+Vertex 563 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 564 565 566 567 568 569
+Vertex 564 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 565 566 567 568 569
+Vertex 565 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 566 567 568 569
+Vertex 566 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 567 568 569
+Vertex 567 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 568 569
+Vertex 568 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 569
+Vertex 569 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568
 Number of edges: 190
+Density: 1
 Number of k-cliques in dense subgraph: 1140
 Average k-cliques per vertex: 57
-Execution time: 4204 milliseconds
+Execution time: 87882 milliseconds
+
 
 
 ```
@@ -1115,16 +1014,6 @@ Execution time: 4204 milliseconds
 For k=4
 
 ```bash
-Graph with 1461 vertices and 2742 edges
-Looking for cliques of size k = 4
-Size 4: 7159
-
-All 4-cliques (7159 in total):
-Initial parameters:
-l: 0, u: 970
-Number of (k-1)-cliques: 3764
-
-
 Current alpha: 485
 Max Flow: 28636
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 485
@@ -1243,69 +1132,71 @@ Current gap: 0.000115633
 Current alpha: 242.25
 Max Flow: 28616
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 242.25
-Current gap: 5.78165e-05
+Current gap: 5.78165e-005
 
 Current alpha: 242.25
 Max Flow: 28616
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 242.25
-Current gap: 2.89083e-05
+Current gap: 2.89083e-005
 
 Current alpha: 242.25
 Max Flow: 28616
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 242.25
-Current gap: 1.44541e-05
+Current gap: 1.44541e-005
 
 Current alpha: 242.25
 Max Flow: 28616
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 242.25
-Current gap: 7.22706e-06
+Current gap: 7.22706e-006
 
 Current alpha: 242.25
 Max Flow: 28616
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 242.25
-Current gap: 3.61353e-06
+Current gap: 3.61353e-006
 
 Current alpha: 242.25
 Max Flow: 28616
 Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 242.25
-Current gap: 1.80677e-06
+Current gap: 1.80677e-006
 
 Current alpha: 242.25
 Max Flow: 28636
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 242.25
-Current gap: 9.03383e-07
+Current gap: 9.03383e-007
 
 Current alpha: 242.25
 Max Flow: 28636
 Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 242.25
-Current gap: 4.51691e-07
+Current gap: 4.51691e-007
+
 
 Dense subgraph found with 20 vertices:
-Vertices in dense subgraph: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
+Vertices in dense subgraph: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
 Edges in dense subgraph:
-Vertex 527 connected to: 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 529 connected to: 527 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 823 connected to: 527 529 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1030 connected to: 527 529 823 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1032 connected to: 527 529 823 1030 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1034 connected to: 527 529 823 1030 1032 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1036 connected to: 527 529 823 1030 1032 1034 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1038 connected to: 527 529 823 1030 1032 1034 1036 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1040 connected to: 527 529 823 1030 1032 1034 1036 1038 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1042 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1044 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1044 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1046 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1046 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1051 1053 1055 1057 1059 1061 1068 1287
-Vertex 1051 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1053 1055 1057 1059 1061 1068 1287
-Vertex 1053 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1055 1057 1059 1061 1068 1287
-Vertex 1055 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1057 1059 1061 1068 1287
-Vertex 1057 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1059 1061 1068 1287
-Vertex 1059 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1061 1068 1287
-Vertex 1061 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1068 1287
-Vertex 1068 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1287
-Vertex 1287 connected to: 527 529 823 1030 1032 1034 1036 1038 1040 1042 1044 1046 1051 1053 1055 1057 1059 1061 1068
+Vertex 550 connected to: 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 551 connected to: 550 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 552 connected to: 550 551 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 553 connected to: 550 551 552 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 554 connected to: 550 551 552 553 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 555 connected to: 550 551 552 553 554 556 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 556 connected to: 550 551 552 553 554 555 557 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 557 connected to: 550 551 552 553 554 555 556 558 559 560 561 562 563 564 565 566 567 568 569
+Vertex 558 connected to: 550 551 552 553 554 555 556 557 559 560 561 562 563 564 565 566 567 568 569
+Vertex 559 connected to: 550 551 552 553 554 555 556 557 558 560 561 562 563 564 565 566 567 568 569
+Vertex 560 connected to: 550 551 552 553 554 555 556 557 558 559 561 562 563 564 565 566 567 568 569
+Vertex 561 connected to: 550 551 552 553 554 555 556 557 558 559 560 562 563 564 565 566 567 568 569
+Vertex 562 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 563 564 565 566 567 568 569
+Vertex 563 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 564 565 566 567 568 569
+Vertex 564 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 565 566 567 568 569
+Vertex 565 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 566 567 568 569
+Vertex 566 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 567 568 569
+Vertex 567 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 568 569
+Vertex 568 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 569
+Vertex 569 connected to: 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568
 Number of edges: 190
+Density: 1
 Number of k-cliques in dense subgraph: 4845
 Average k-cliques per vertex: 242.25
-Execution time: 6724 milliseconds
+Execution time: 144461 milliseconds
 
 ```
