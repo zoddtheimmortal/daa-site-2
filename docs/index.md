@@ -1,4 +1,4 @@
-# Clique Listing Algorithms
+# Efficient Algorithms for Densest Subgraph Discovery
 
 ## Cliques
 
@@ -8,16 +8,5 @@ In computer science, the **clique problem** is the computational problem of find
 
 ## Algorithms
 
--   [Arboricity and Subgraph Listing Algorithms](arboricity.md) - 1985
--   [Computational Techniques for Maximum Clique Problems](tomita.md) - 2006
--   [Listing All Maximal Cliques in Sparse Graphs in Near-optimal Time](bron-kerbosch.md) - 2010
-
-## Clique Visualization
-
-Use your mouse to move the nodes of the graph!
-
-<iframe src="./clique_animation.html" width="100%" height="600px"></iframe>
-
-For [Architecture and Dataset](archds.md) info.
-
-<!-- <img src="./graphs/akira.png" alt="Akira" width="50" height="100"> -->
+-   [Algorithm 1 - Exact](algo1.md)
+-   [Algorithm 4 - CoreExact](algo4.md)
