@@ -1,2 +1,2 @@
-# daa-site
-Website to showcase DAA Assignment 1
+# daa-site-2
+Website to showcase DAA Assignment 2
