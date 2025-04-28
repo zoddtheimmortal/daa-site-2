@@ -1,0 +1,60 @@
+site_name: Clique Listing Algorithms
+
+nav:
+    - Home: index.md
+    - Chiba 1985: arboricity.md
+    - Tomita 2006: tomita.md
+    - Bron 2010: bron-kerbosch.md
+    - Comparision: toc.md
+    - Arch & DS: archds.md
+
+theme:
+    name: material
+    language: en
+    font:
+        text: Roboto
+        code: Roboto Mono
+    icon:
+        logo: fontawesome/solid/earth-americas
+        repo: fontawesome/brands/github
+    features:
+        - content.code.copy
+        - navigation.footer
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: teal
+          accent: blue
+          toggle:
+              icon: material/weather-night
+              name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: cyan
+          accent: amber
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to light mode
+
+markdown_extensions:
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - abbr
+    - toc:
+          permalink: true
+    - footnotes
+    - codehilite
+    - admonition
+    - pymdownx.arithmatex
+
+extra_javascript:
+    - https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+    - https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js
+
+extra_css:
+    - https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css

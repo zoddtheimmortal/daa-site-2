@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Clique Animation</title>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<style>
+			body {
+				background-color: #1e1e1e;
+				color: #ffffff;
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				min-height: 100vh;
+				overflow-x: hidden;
+			}
+
+			h2 {
+				margin-bottom: 10px;
+			}
+
+			.graph-container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			svg {
+				width: 100%;
+				height: 80vh; /* Responsive height based on viewport height */
+				max-height: 700px;
+				min-height: 400px;
+				background-color: #2a2a2a;
+				border: 2px solid #444;
+				border-radius: 10px;
+			}
+
+			.node {
+				fill: #3498db;
+				stroke: #ffffff;
+				stroke-width: 2px;
+				transition: fill 0.5s ease-in-out;
+			}
+
+			.clique {
+				fill: #e74c3c !important;
+				stroke: #ffcc00;
+				stroke-width: 3px;
+			}
+
+			.link {
+				stroke: #bbbbbb;
+				stroke-width: 2px;
+				transition: stroke 0.5s ease-in-out;
+			}
+
+			.clique-link {
+				stroke: #ffcc00 !important;
+				stroke-width: 4px !important;
+			}
+
+			.label {
+				fill: #ffffff;
+				font-size: 16px;
+				font-weight: bold;
+				text-anchor: middle;
+				pointer-events: none;
+			}
+
+			.btn-container {
+				margin: 20px 0;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.btn {
+				background-color: #ffcc00;
+				color: #1e1e1e;
+				border: none;
+				margin: 0px 5px;
+				padding: 10px 20px;
+				font-size: 16px;
+				font-weight: bold;
+				cursor: pointer;
+				border-radius: 5px;
+				transition: background-color 0.3s;
+			}
+
+			.btn:hover {
+				background-color: #e6b800;
+			}
+
+			.clique-info {
+				margin: 10px 0;
+				font-size: 18px;
+				color: #ffcc00;
+				min-height: 27px;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				svg {
+					height: 60vh;
+				}
+
+				.btn {
+					padding: 8px 8px;
+					font-size: 14px;
+				}
+
+				.label {
+					font-size: 14px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				svg {
+					height: 50vh;
+				}
+
+				.btn {
+					padding: 6px 12px;
+					font-size: 12px;
+				}
+
+				.label {
+					font-size: 12px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="btn-container">
+			<button class="btn" onclick="highlightCliques()">
+				Show Cliques
+			</button>
+			<button class="btn" onclick="resetGraph()">Reset</button>
+		</div>
+		<div id="clique-info" class="clique-info"></div>
+		<div class="graph-container">
+			<svg id="graph"></svg>
+		</div>
+
+		<script>
+			// Get container dimensions
+			let graphContainer = document.querySelector(".graph-container");
+			let containerWidth = graphContainer.clientWidth;
+			let containerHeight = Math.min(window.innerHeight * 0.8, 700);
+
+			// Adjust dimensions on window resize
+			function updateDimensions() {
+				containerWidth = graphContainer.clientWidth;
+				containerHeight = Math.min(window.innerHeight * 0.8, 700);
+
+				svg.attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+					.attr("width", containerWidth)
+					.attr("height", containerHeight);
+
+				// Update simulation
+				simulation
+					.force(
+						"center",
+						d3.forceCenter(containerWidth / 2, containerHeight / 2)
+					)
+					.alpha(0.3)
+					.restart();
+			}
+
+			// Graph Data from input (9 vertices, 15 edges)
+			const nodes = [
+				{ id: 0 },
+				{ id: 1 },
+				{ id: 2 },
+				{ id: 3 },
+				{ id: 4 },
+				{ id: 5 },
+				{ id: 6 },
+				{ id: 7 },
+				{ id: 8 },
+			];
+
+			const links = [
+				{ source: 0, target: 1 },
+				{ source: 0, target: 8 },
+				{ source: 1, target: 8 },
+				{ source: 2, target: 8 },
+				{ source: 1, target: 2 },
+				{ source: 2, target: 7 },
+				{ source: 2, target: 3 },
+				{ source: 3, target: 7 },
+				{ source: 6, target: 7 },
+				{ source: 3, target: 5 },
+				{ source: 5, target: 6 },
+				{ source: 5, target: 7 },
+				{ source: 3, target: 6 },
+				{ source: 3, target: 4 },
+				{ source: 4, target: 5 },
+			];
+
+			// Define cliques as provided
+			const cliques = [
+				[0, 1, 8], // Clique 1
+				[1, 2, 8], // Clique 2
+				[2, 3, 7], // Clique 3
+				[3, 4, 5], // Clique 4
+				[3, 5, 6, 7], // Clique 5
+			];
+
+			const svg = d3
+				.select("#graph")
+				.attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+				.attr("width", containerWidth)
+				.attr("height", containerHeight)
+				.attr("preserveAspectRatio", "xMidYMid meet");
+
+			// Calculate optimal node size based on viewport
+			function getNodeRadius() {
+				const baseSize = 20;
+				const scaleFactor =
+					Math.min(containerWidth, containerHeight) / 800;
+				return Math.max(12, Math.min(25, baseSize * scaleFactor));
+			}
+
+			const simulation = d3
+				.forceSimulation(nodes)
+				.force(
+					"link",
+					d3
+						.forceLink(links)
+						.id((d) => d.id)
+						.distance(
+							() => Math.min(containerWidth, containerHeight) / 6
+						)
+				)
+				.force(
+					"charge",
+					d3
+						.forceManyBody()
+						.strength(
+							() => -Math.min(containerWidth, containerHeight) / 3
+						)
+				)
+				.force(
+					"center",
+					d3.forceCenter(containerWidth / 2, containerHeight / 2)
+				)
+				.force(
+					"collision",
+					d3.forceCollide().radius(getNodeRadius() * 1.5)
+				);
+
+			const link = svg
+				.selectAll(".link")
+				.data(links)
+				.enter()
+				.append("line")
+				.attr("class", "link");
+
+			const node = svg
+				.selectAll(".node")
+				.data(nodes)
+				.enter()
+				.append("circle")
+				.attr("class", "node")
+				.attr("r", getNodeRadius())
+				.call(
+					d3
+						.drag()
+						.on("start", dragstarted)
+						.on("drag", dragged)
+						.on("end", dragended)
+				);
+
+			const labels = svg
+				.selectAll(".label")
+				.data(nodes)
+				.enter()
+				.append("text")
+				.attr("class", "label")
+				.text((d) => d.id);
+
+			simulation.on("tick", () => {
+				// Keep nodes within bounds
+				nodes.forEach((d) => {
+					const radius = getNodeRadius();
+					d.x = Math.max(
+						radius,
+						Math.min(containerWidth - radius, d.x)
+					);
+					d.y = Math.max(
+						radius,
+						Math.min(containerHeight - radius, d.y)
+					);
+				});
+
+				link.attr("x1", (d) => d.source.x)
+					.attr("y1", (d) => d.source.y)
+					.attr("x2", (d) => d.target.x)
+					.attr("y2", (d) => d.target.y);
+
+				node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+				labels.attr("x", (d) => d.x).attr("y", (d) => d.y + 6);
+			});
+
+			// Drag functions
+			function dragstarted(event, d) {
+				if (!event.active) simulation.alphaTarget(0.3).restart();
+				d.fx = d.x;
+				d.fy = d.y;
+			}
+
+			function dragged(event, d) {
+				d.fx = event.x;
+				d.fy = event.y;
+			}
+
+			function dragended(event, d) {
+				if (!event.active) simulation.alphaTarget(0);
+				d.fx = null;
+				d.fy = null;
+			}
+
+			// Animate cliques
+			function highlightCliques() {
+				resetGraph(); // Start fresh
+
+				const cliqueInfo = document.getElementById("clique-info");
+
+				cliques.forEach((clique, i) => {
+					setTimeout(() => {
+						// Display current clique information
+						cliqueInfo.textContent = `Showing Clique ${
+							i + 1
+						}: [${clique.join(", ")}]`;
+
+						// Highlight nodes in clique
+						node.filter((d) => clique.includes(d.id))
+							.transition()
+							.duration(1000)
+							.attr("class", "node clique")
+							.attr("r", getNodeRadius() * 1.2);
+
+						// Highlight links between clique nodes
+						link.filter(
+							(d) =>
+								clique.includes(d.source.id) &&
+								clique.includes(d.target.id)
+						)
+							.transition()
+							.duration(1000)
+							.attr("class", "link clique-link");
+					}, i * 2000);
+				});
+
+				// Clear the info after all animations
+				setTimeout(() => {
+					cliqueInfo.textContent = "All cliques shown";
+				}, cliques.length * 2000);
+			}
+
+			// Reset the graph styling
+			function resetGraph() {
+				document.getElementById("clique-info").textContent = "";
+
+				node.transition()
+					.duration(500)
+					.attr("class", "node")
+					.attr("r", getNodeRadius());
+
+				link.transition().duration(500).attr("class", "link");
+			}
+
+			// Handle window resize
+			window.addEventListener("resize", () => {
+				clearTimeout(window.resizeTimer);
+				window.resizeTimer = setTimeout(updateDimensions, 250);
+			});
+
+			// Initial layout adjustment
+			simulation.alpha(0.5).restart();
+		</script>
+	</body>
+</html>

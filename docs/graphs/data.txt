@@ -1,0 +1,19 @@
+Execution time(ms): 7546
+Size 2: 8655
+Size 3: 13718
+Size 4: 27292
+Size 5: 48416
+Size 6: 68872
+Size 7: 83266
+Size 8: 76732
+Size 9: 54456
+Size 10: 35470
+Size 11: 21736
+Size 12: 11640
+Size 13: 5449
+Size 14: 2329
+Size 15: 740
+Size 16: 208
+Size 17: 23
+Total number of maximal cliques: 459002
+Maximal clique size: 17
