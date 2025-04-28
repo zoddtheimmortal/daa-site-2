@@ -2801,3 +2801,635 @@ Number of k-cliques in dense subgraph: 1543
 Average k-cliques per vertex (rho): 17.5341
 Execution time: 3817135 milliseconds
 ```
+
+#### Yeast Dataset
+
+For k=2
+
+```bash
+Graph with 1458 vertices and 1947 edges
+Looking for cliques of size k = 2
+Size 2: 1947
+
+All 2-cliques (1947 in total):
+Initial parameters:
+l: 0, u: 56
+Number of (k-1)-cliques: 1458
+
+
+Current alpha: 28
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 28
+Current gap: 28
+
+Current alpha: 14
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 14
+Current gap: 14
+
+Current alpha: 7
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 7
+Current gap: 7
+
+Current alpha: 3.5
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.5
+Current gap: 3.5
+
+Current alpha: 1.75
+Max Flow: 3483
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 1.75
+Current gap: 1.75
+
+Current alpha: 2.625
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.625
+Current gap: 0.875
+
+Current alpha: 3.0625
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.0625
+Current gap: 0.4375
+
+Current alpha: 2.84375
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.84375
+Current gap: 0.21875
+
+Current alpha: 2.95312
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.95312
+Current gap: 0.109375
+
+Current alpha: 3.00781
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00781
+Current gap: 0.0546875
+
+Current alpha: 2.98047
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.98047
+Current gap: 0.0273438
+
+Current alpha: 2.99414
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99414
+Current gap: 0.0136719
+
+Current alpha: 3.00098
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00098
+Current gap: 0.00683594
+
+Current alpha: 2.99756
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99756
+Current gap: 0.00341797
+
+Current alpha: 2.99927
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99927
+Current gap: 0.00170898
+
+Current alpha: 3.00012
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00012
+Current gap: 0.000854492
+
+Current alpha: 2.99969
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99969
+Current gap: 0.000427246
+
+Current alpha: 2.99991
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99991
+Current gap: 0.000213623
+
+Current alpha: 3.00002
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00002
+Current gap: 0.000106812
+
+Current alpha: 2.99996
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99996
+Current gap: 5.34058e-05
+
+Current alpha: 2.99999
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99999
+Current gap: 2.67029e-05
+
+Current alpha: 3
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3
+Current gap: 1.33514e-05
+
+Current alpha: 3
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 6.67572e-06
+
+Current alpha: 3
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 3.33786e-06
+
+Current alpha: 3
+Max Flow: 3894
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3
+Current gap: 1.66893e-06
+
+Current alpha: 3
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 8.34465e-07
+
+Current alpha: 3
+Max Flow: 3891
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 4.17233e-07
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 610 645 801 874 875 877 936
+Edges in dense subgraph:
+Vertex 610 connected to: 645 801 874 875 936
+Vertex 645 connected to: 610 801 874 875 877 936
+Vertex 801 connected to: 610 645 874 875 936
+Vertex 874 connected to: 610 645 801 875 877 936
+Vertex 875 connected to: 610 645 801 874 877 936
+Vertex 877 connected to: 645 874 875 936
+Vertex 936 connected to: 610 645 801 874 875 877
+Number of edges: 19
+Number of k-cliques in dense subgraph: 19
+Average k-cliques per vertex (Density): 2.71429
+Execution time: 2065 milliseconds
+
+```
+
+For k=3
+
+```bash
+Graph with 1458 vertices and 1947 edges
+Looking for cliques of size k = 3
+Size 3: 206
+
+All 3-cliques (206 in total):
+Initial parameters:
+l: 0, u: 18
+Number of (k-1)-cliques: 1947
+
+
+Current alpha: 9
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9
+Current gap: 9
+
+Current alpha: 4.5
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.5
+Current gap: 4.5
+
+Current alpha: 2.25
+Max Flow: 579
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.25
+Current gap: 2.25
+
+Current alpha: 3.375
+Max Flow: 610
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.375
+Current gap: 1.125
+
+Current alpha: 3.9375
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.9375
+Current gap: 0.5625
+
+Current alpha: 4.21875
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.21875
+Current gap: 0.28125
+
+Current alpha: 4.07812
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.07812
+Current gap: 0.140625
+
+Current alpha: 4.00781
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00781
+Current gap: 0.0703125
+
+Current alpha: 3.97266
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.97266
+Current gap: 0.0351562
+
+Current alpha: 3.99023
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99023
+Current gap: 0.0175781
+
+Current alpha: 3.99902
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99902
+Current gap: 0.00878906
+
+Current alpha: 4.00342
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00342
+Current gap: 0.00439453
+
+Current alpha: 4.00122
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00122
+Current gap: 0.00219727
+
+Current alpha: 4.00012
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00012
+Current gap: 0.00109863
+
+Current alpha: 3.99957
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99957
+Current gap: 0.000549316
+
+Current alpha: 3.99985
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99985
+Current gap: 0.000274658
+
+Current alpha: 3.99998
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99998
+Current gap: 0.000137329
+
+Current alpha: 4.00005
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00005
+Current gap: 6.86646e-05
+
+Current alpha: 4.00002
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00002
+Current gap: 3.43323e-05
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 1.71661e-05
+
+Current alpha: 3.99999
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99999
+Current gap: 8.58307e-06
+
+Current alpha: 4
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 4
+Current gap: 4.29153e-06
+
+Current alpha: 4
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 4
+Current gap: 2.14577e-06
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 1.07288e-06
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 5.36442e-07
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 2.68221e-07
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 610 645 801 874 875 877 936
+Edges in dense subgraph:
+Vertex 610 connected to: 645 801 874 875 936
+Vertex 645 connected to: 610 801 874 875 877 936
+Vertex 801 connected to: 610 645 874 875 936
+Vertex 874 connected to: 610 645 801 875 877 936
+Vertex 875 connected to: 610 645 801 874 877 936
+Vertex 877 connected to: 645 874 875 936
+Vertex 936 connected to: 610 645 801 874 875 877
+Number of edges: 19
+Number of k-cliques in dense subgraph: 26
+Average k-cliques per vertex (Density): 3.71429
+Execution time: 2404 milliseconds
+
+```
+
+For k=4
+
+```bash
+Graph with 1458 vertices and 1947 edges
+Looking for cliques of size k = 4
+Size 4: 39
+
+All 4-cliques (39 in total):
+Initial parameters:
+l: 0, u: 13
+Number of (k-1)-cliques: 206
+
+
+Current alpha: 6.5
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 6.5
+Current gap: 6.5
+
+Current alpha: 3.25
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.25
+Current gap: 3.25
+
+Current alpha: 1.625
+Max Flow: 122
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 1.625
+Current gap: 1.625
+
+Current alpha: 2.4375
+Max Flow: 143
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.4375
+Current gap: 0.8125
+
+Current alpha: 2.84375
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.84375
+Current gap: 0.40625
+
+Current alpha: 2.64062
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.64062
+Current gap: 0.203125
+
+Current alpha: 2.74219
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74219
+Current gap: 0.101562
+
+Current alpha: 2.79297
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.79297
+Current gap: 0.0507812
+
+Current alpha: 2.76758
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.76758
+Current gap: 0.0253906
+
+Current alpha: 2.75488
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75488
+Current gap: 0.0126953
+
+Current alpha: 2.74854
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74854
+Current gap: 0.00634766
+
+Current alpha: 2.75171
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75171
+Current gap: 0.00317383
+
+Current alpha: 2.75012
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75012
+Current gap: 0.00158691
+
+Current alpha: 2.74933
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74933
+Current gap: 0.000793457
+
+Current alpha: 2.74973
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74973
+Current gap: 0.000396729
+
+Current alpha: 2.74992
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74992
+Current gap: 0.000198364
+
+Current alpha: 2.75002
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75002
+Current gap: 9.91821e-05
+
+Current alpha: 2.74997
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74997
+Current gap: 4.95911e-05
+
+Current alpha: 2.75
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.75
+Current gap: 2.47955e-05
+
+Current alpha: 2.75001
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75001
+Current gap: 1.23978e-05
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 6.19888e-06
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 3.09944e-06
+
+Current alpha: 2.75
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.75
+Current gap: 1.54972e-06
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 7.7486e-07
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 3.8743e-07
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 610 645 801 874 875 877 936
+Edges in dense subgraph:
+Vertex 610 connected to: 645 801 874 875 936
+Vertex 645 connected to: 610 801 874 875 877 936
+Vertex 801 connected to: 610 645 874 875 936
+Vertex 874 connected to: 610 645 801 875 877 936
+Vertex 875 connected to: 610 645 801 874 877 936
+Vertex 877 connected to: 645 874 875 936
+Vertex 936 connected to: 610 645 801 874 875 877
+Number of edges: 19
+Number of k-cliques in dense subgraph: 19
+Average k-cliques per vertex (Density): 2.71429
+Execution time: 291 milliseconds
+
+```
+
+For k=5
+
+```bash
+Graph with 1458 vertices and 1947 edges
+Looking for cliques of size k = 5
+Size 5: 8
+
+All 5-cliques (8 in total):
+Initial parameters:
+l: 0, u: 6
+Number of (k-1)-cliques: 39
+
+
+Current alpha: 3
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3
+Current gap: 3
+
+Current alpha: 1.5
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.5
+Current gap: 1.5
+
+Current alpha: 0.75
+Max Flow: 26
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.75
+Current gap: 0.75
+
+Current alpha: 1.125
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.125
+Current gap: 0.375
+
+Current alpha: 0.9375
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.9375
+Current gap: 0.1875
+
+Current alpha: 1.03125
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.03125
+Current gap: 0.09375
+
+Current alpha: 0.984375
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.984375
+Current gap: 0.046875
+
+Current alpha: 1.00781
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00781
+Current gap: 0.0234375
+
+Current alpha: 0.996094
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.996094
+Current gap: 0.0117188
+
+Current alpha: 1.00195
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00195
+Current gap: 0.00585938
+
+Current alpha: 0.999023
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999023
+Current gap: 0.00292969
+
+Current alpha: 1.00049
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00049
+Current gap: 0.00146484
+
+Current alpha: 0.999756
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999756
+Current gap: 0.000732422
+
+Current alpha: 1.00012
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00012
+Current gap: 0.000366211
+
+Current alpha: 0.999939
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999939
+Current gap: 0.000183105
+
+Current alpha: 1.00003
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00003
+Current gap: 9.15527e-05
+
+Current alpha: 0.999985
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999985
+Current gap: 4.57764e-05
+
+Current alpha: 1.00001
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00001
+Current gap: 2.28882e-05
+
+Current alpha: 0.999996
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999996
+Current gap: 1.14441e-05
+
+Current alpha: 1
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1
+Current gap: 5.72205e-06
+
+Current alpha: 0.999999
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999999
+Current gap: 2.86102e-06
+
+Current alpha: 1
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1
+Current gap: 1.43051e-06
+
+Current alpha: 1
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 1
+Current gap: 7.15256e-07
+
+Current alpha: 1
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1
+Current gap: 3.57628e-07
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 610 645 801 874 875 877 936
+Edges in dense subgraph:
+Vertex 610 connected to: 645 801 874 875 936
+Vertex 645 connected to: 610 801 874 875 877 936
+Vertex 801 connected to: 610 645 874 875 936
+Vertex 874 connected to: 610 645 801 875 877 936
+Vertex 875 connected to: 610 645 801 874 877 936
+Vertex 877 connected to: 645 874 875 936
+Vertex 936 connected to: 610 645 801 874 875 877
+Number of edges: 19
+Number of k-cliques in dense subgraph: 7
+Average k-cliques per vertex (Density): 1
+Execution time: 74 milliseconds
+
+```
