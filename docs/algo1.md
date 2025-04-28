@@ -655,6 +655,610 @@ int main() {
 
 ### Results
 
+#### Yeast Dataset
+
+For k=2
+
+```bash
+Current alpha: 28
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 28
+Current gap: 28
+
+Current alpha: 14
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 14
+Current gap: 14
+
+Current alpha: 7
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 7
+Current gap: 7
+
+Current alpha: 3.5
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.5
+Current gap: 3.5
+
+Current alpha: 1.75
+Max Flow: 3484
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 1.75
+Current gap: 1.75
+
+Current alpha: 2.625
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.625
+Current gap: 0.875
+
+Current alpha: 3.0625
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.0625
+Current gap: 0.4375
+
+Current alpha: 2.84375
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.84375
+Current gap: 0.21875
+
+Current alpha: 2.95312
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.95312
+Current gap: 0.109375
+
+Current alpha: 3.00781
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00781
+Current gap: 0.0546875
+
+Current alpha: 2.98047
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.98047
+Current gap: 0.0273438
+
+Current alpha: 2.99414
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99414
+Current gap: 0.0136719
+
+Current alpha: 3.00098
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00098
+Current gap: 0.00683594
+
+Current alpha: 2.99756
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99756
+Current gap: 0.00341797
+
+Current alpha: 2.99927
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99927
+Current gap: 0.00170898
+
+Current alpha: 3.00012
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00012
+Current gap: 0.000854492
+
+Current alpha: 2.99969
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99969
+Current gap: 0.000427246
+
+Current alpha: 2.99991
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99991
+Current gap: 0.000213623
+
+Current alpha: 3.00002
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.00002
+Current gap: 0.000106812
+
+Current alpha: 2.99996
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99996
+Current gap: 5.34058e-005
+
+Current alpha: 2.99999
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.99999
+Current gap: 2.67029e-005
+
+Current alpha: 3
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3
+Current gap: 1.33514e-005
+
+Current alpha: 3
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 6.67572e-006
+
+Current alpha: 3
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 3.33786e-006
+
+Current alpha: 3
+Max Flow: 3896
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3
+Current gap: 1.66893e-006
+
+Current alpha: 3
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 8.34465e-007
+
+Current alpha: 3
+Max Flow: 3893
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3
+Current gap: 4.17233e-007
+
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 805 912 960 1075 1091 1099 1100
+Edges in dense subgraph:
+Vertex 805 connected to: 912 960 1091 1099 1100
+Vertex 912 connected to: 805 960 1075 1091 1099 1100
+Vertex 960 connected to: 805 912 1075 1091 1099 1100
+Vertex 1075 connected to: 912 960 1099 1100
+Vertex 1091 connected to: 805 912 960 1099 1100
+Vertex 1099 connected to: 805 912 960 1075 1091 1100
+Vertex 1100 connected to: 805 912 960 1075 1091 1099
+Number of edges: 19
+Density: 0.904762
+Number of k-cliques in dense subgraph: 19
+Average k-cliques per vertex: 2.71429
+Execution time: 50157 milliseconds
+
+```
+
+For k=3
+
+```bash
+
+Current alpha: 9
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9
+Current gap: 9
+
+Current alpha: 4.5
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.5
+Current gap: 4.5
+
+Current alpha: 2.25
+Max Flow: 579
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.25
+Current gap: 2.25
+
+Current alpha: 3.375
+Max Flow: 610
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.375
+Current gap: 1.125
+
+Current alpha: 3.9375
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.9375
+Current gap: 0.5625
+
+Current alpha: 4.21875
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.21875
+Current gap: 0.28125
+
+Current alpha: 4.07812
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.07812
+Current gap: 0.140625
+
+Current alpha: 4.00781
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00781
+Current gap: 0.0703125
+
+Current alpha: 3.97266
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.97266
+Current gap: 0.0351562
+
+Current alpha: 3.99023
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99023
+Current gap: 0.0175781
+
+Current alpha: 3.99902
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99902
+Current gap: 0.00878906
+
+Current alpha: 4.00342
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00342
+Current gap: 0.00439453
+
+Current alpha: 4.00122
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00122
+Current gap: 0.00219727
+
+Current alpha: 4.00012
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00012
+Current gap: 0.00109863
+
+Current alpha: 3.99957
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99957
+Current gap: 0.000549316
+
+Current alpha: 3.99985
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99985
+Current gap: 0.000274658
+
+Current alpha: 3.99998
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99998
+Current gap: 0.000137329
+
+Current alpha: 4.00005
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00005
+Current gap: 6.86646e-005
+
+Current alpha: 4.00002
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4.00002
+Current gap: 3.43323e-005
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 1.71661e-005
+
+Current alpha: 3.99999
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 3.99999
+Current gap: 8.58307e-006
+
+Current alpha: 4
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 4
+Current gap: 4.29153e-006
+
+Current alpha: 4
+Max Flow: 617
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 4
+Current gap: 2.14577e-006
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 1.07288e-006
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 5.36442e-007
+
+Current alpha: 4
+Max Flow: 618
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 4
+Current gap: 2.68221e-007
+
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 805 912 960 1075 1091 1099 1100
+Edges in dense subgraph:
+Vertex 805 connected to: 912 960 1091 1099 1100
+Vertex 912 connected to: 805 960 1075 1091 1099 1100
+Vertex 960 connected to: 805 912 1075 1091 1099 1100
+Vertex 1075 connected to: 912 960 1099 1100
+Vertex 1091 connected to: 805 912 960 1099 1100
+Vertex 1099 connected to: 805 912 960 1075 1091 1100
+Vertex 1100 connected to: 805 912 960 1075 1091 1099
+Number of edges: 19
+Density: 0.904762
+Number of k-cliques in dense subgraph: 26
+Average k-cliques per vertex: 3.71429
+Execution time: 60837 milliseconds
+
+
+```
+
+k=4
+```bash
+
+Current alpha: 6.5
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 6.5
+Current gap: 6.5
+
+Current alpha: 3.25
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3.25
+Current gap: 3.25
+
+Current alpha: 1.625
+Max Flow: 122
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 1.625
+Current gap: 1.625
+
+Current alpha: 2.4375
+Max Flow: 143
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.4375
+Current gap: 0.8125
+
+Current alpha: 2.84375
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.84375
+Current gap: 0.40625
+
+Current alpha: 2.64062
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.64062
+Current gap: 0.203125
+
+Current alpha: 2.74219
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74219
+Current gap: 0.101562
+
+Current alpha: 2.79297
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.79297
+Current gap: 0.0507812
+
+Current alpha: 2.76758
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.76758
+Current gap: 0.0253906
+
+Current alpha: 2.75488
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75488
+Current gap: 0.0126953
+
+Current alpha: 2.74854
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74854
+Current gap: 0.00634766
+
+Current alpha: 2.75171
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75171
+Current gap: 0.00317383
+
+Current alpha: 2.75012
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75012
+Current gap: 0.00158691
+
+Current alpha: 2.74933
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74933
+Current gap: 0.000793457
+
+Current alpha: 2.74973
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74973
+Current gap: 0.000396729
+
+Current alpha: 2.74992
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74992
+Current gap: 0.000198364
+
+Current alpha: 2.75002
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75002
+Current gap: 9.91821e-005
+
+Current alpha: 2.74997
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.74997
+Current gap: 4.95911e-005
+
+Current alpha: 2.75
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.75
+Current gap: 2.47955e-005
+
+Current alpha: 2.75001
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75001
+Current gap: 1.23978e-005
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 6.19888e-006
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 3.09944e-006
+
+Current alpha: 2.75
+Max Flow: 150
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 2.75
+Current gap: 1.54972e-006
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 7.7486e-007
+
+Current alpha: 2.75
+Max Flow: 156
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 2.75
+Current gap: 3.8743e-007
+
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 805 912 960 1075 1091 1099 1100
+Edges in dense subgraph:
+Vertex 805 connected to: 912 960 1091 1099 1100
+Vertex 912 connected to: 805 960 1075 1091 1099 1100
+Vertex 960 connected to: 805 912 1075 1091 1099 1100
+Vertex 1075 connected to: 912 960 1099 1100
+Vertex 1091 connected to: 805 912 960 1099 1100
+Vertex 1099 connected to: 805 912 960 1075 1091 1100
+Vertex 1100 connected to: 805 912 960 1075 1091 1099
+Number of edges: 19
+Density: 0.904762
+Number of k-cliques in dense subgraph: 19
+Average k-cliques per vertex: 2.71429
+Execution time: 7435 milliseconds
+
+
+```
+
+k=5
+
+```bash
+
+Current alpha: 3
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 3
+Current gap: 3
+
+Current alpha: 1.5
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.5
+Current gap: 1.5
+
+Current alpha: 0.75
+Max Flow: 26
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.75
+Current gap: 0.75
+
+Current alpha: 1.125
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.125
+Current gap: 0.375
+
+Current alpha: 0.9375
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.9375
+Current gap: 0.1875
+
+Current alpha: 1.03125
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.03125
+Current gap: 0.09375
+
+Current alpha: 0.984375
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.984375
+Current gap: 0.046875
+
+Current alpha: 1.00781
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00781
+Current gap: 0.0234375
+
+Current alpha: 0.996094
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.996094
+Current gap: 0.0117188
+
+Current alpha: 1.00195
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00195
+Current gap: 0.00585938
+
+Current alpha: 0.999023
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999023
+Current gap: 0.00292969
+
+Current alpha: 1.00049
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00049
+Current gap: 0.00146484
+
+Current alpha: 0.999756
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999756
+Current gap: 0.000732422
+
+Current alpha: 1.00012
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00012
+Current gap: 0.000366211
+
+Current alpha: 0.999939
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999939
+Current gap: 0.000183105
+
+Current alpha: 1.00003
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00003
+Current gap: 9.15527e-005
+
+Current alpha: 0.999985
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999985
+Current gap: 4.57764e-005
+
+Current alpha: 1.00001
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1.00001
+Current gap: 2.28882e-005
+
+Current alpha: 0.999996
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999996
+Current gap: 1.14441e-005
+
+Current alpha: 1
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1
+Current gap: 5.72205e-006
+
+Current alpha: 0.999999
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 0.999999
+Current gap: 2.86102e-006
+
+Current alpha: 1
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1
+Current gap: 1.43051e-006
+
+Current alpha: 1
+Max Flow: 33
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 1
+Current gap: 7.15256e-007
+
+Current alpha: 1
+Max Flow: 40
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1
+Current gap: 3.57628e-007
+
+
+Dense subgraph found with 7 vertices:
+Vertices in dense subgraph: 805 912 960 1075 1091 1099 1100
+Edges in dense subgraph:
+Vertex 805 connected to: 912 960 1091 1099 1100
+Vertex 912 connected to: 805 960 1075 1091 1099 1100
+Vertex 960 connected to: 805 912 1075 1091 1099 1100
+Vertex 1075 connected to: 912 960 1099 1100
+Vertex 1091 connected to: 805 912 960 1099 1100
+Vertex 1099 connected to: 805 912 960 1075 1091 1100
+Vertex 1100 connected to: 805 912 960 1075 1091 1099
+Number of edges: 19
+Density: 0.904762
+Number of k-cliques in dense subgraph: 7
+Average k-cliques per vertex: 1
+Execution time: 2040 milliseconds
+
+```
+
 #### Netscience Dataset
 
 For k=2
@@ -1195,6 +1799,1109 @@ Number of edges: 190
 Number of k-cliques in dense subgraph: 4845
 rho: 242.25
 Execution time: 144461 milliseconds
+
+```
+
+#### As733(latest) Dataset
+
+For k=2
+
+```bash
+
+Current alpha: 729
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 729
+
+Current alpha: 364.5
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 364.5
+
+Current alpha: 182.25
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 182.25
+
+Current alpha: 91.125
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 91.125
+
+Current alpha: 45.5625
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 45.5625
+
+Current alpha: 22.7812
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 22.7812
+
+Current alpha: 11.3906
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 11.3906
+
+Current alpha: 5.69531
+Max Flow: 24547
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 13 16 17 19 20 21 22 23 25 27 29 32 39 42 46 48 49 50 52 53 57 58 59 60 61 62 63 64 66 68 77 86 87 93 94 101 102 106 127 130 132 134 135 139 149 168 171 172 174 177 181 184 197 198 200 208 218 243 248 249 252 310 329 353 373 418 438 470 476 477 551 552 553 580 601 632 654 663 699 717 772 802 818 857 858 859 867 872 873 875 877 893 900 902 903 904 905 915 921 923 924 927 929 931 933 938 939 941 942 947 996 1033 1041 1046 1080 1113 1118 1120 1121 1312 1482 1673 1815 2182 2188 2195 2205 2219 2593 2959 2989 3255 3363 4335 4388 4472 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6487 6490 6491 6493 6494 6495 6496 6497 6499 6501 6503 6506 6513 6516 6520 6522 6523 6524 6526 6527 6531 6532 6533 6534 6535 6536 6537 6538 6540 6542 6551 6560 6561 6567 6568 6575 6576 6580 6601 6604 6606 6608 6609 6613 6623 6642 6645 6646 6648 6651 6655 6658 6671 6672 6674 6682 6692 6717 6722 6723 6726 6784 6803 6827 6847 6892 6912 6944 6950 6951 7025 7026 7027 7054 7075 7106 7128 7137 7173 7191 7246 7276 7292 7331 7332 7333 7341 7346 7347 7349 7351 7367 7374 7376 7377 7378 7379 7389 7395 7397 7398 7401 7403 7405 7407 7412 7413 7415 7416 7421 7470 7507 7515 7520 7554 7587 7592 7594 7595 7786 7956 8147 8289 8656 8662 8669 8679 8693 9067 9433 9463 9729 9837 10809 10862 10946
+Current gap: 5.69531
+
+Current alpha: 8.54297
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 2.84766
+
+Current alpha: 9.9668
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 1.42383
+
+Current alpha: 9.25488
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.711914
+
+Current alpha: 8.89893
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 0.355957
+
+Current alpha: 9.0769
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.177979
+
+Current alpha: 8.98792
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 0.0889893
+
+Current alpha: 9.03241
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.0444946
+
+Current alpha: 9.01016
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.0222473
+
+Current alpha: 8.99904
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 0.0111237
+
+Current alpha: 9.0046
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.00556183
+
+Current alpha: 9.00182
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.00278091
+
+Current alpha: 9.00043
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.00139046
+
+Current alpha: 8.99973
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 0.000695229
+
+Current alpha: 9.00008
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 0.000347614
+
+Current alpha: 8.99991
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 0.000173807
+
+Current alpha: 8.99999
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 8.69036e-005
+
+Current alpha: 9.00004
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 4.34518e-005
+
+Current alpha: 9.00002
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 2.17259e-005
+
+Current alpha: 9.00001
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 1.08629e-005
+
+Current alpha: 9
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 5.43147e-006
+
+Current alpha: 9
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 2.71574e-006
+
+Current alpha: 9
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 1.35787e-006
+
+Current alpha: 9
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 6.78934e-007
+
+Current alpha: 9
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 3.39467e-007
+
+Current alpha: 9
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 1.69734e-007
+
+Current alpha: 9
+Max Flow: 25114
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 94 102 132 134 149 174 181 197 601 632 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6485 6491 6495 6496 6497 6499 6501 6503 6513 6516 6522 6524 6526 6531 6535 6538 6560 6561 6567 6568 6576 6606 6608 6623 6648 6655 6671 7075 7106 7128
+Current gap: 8.48668e-008
+
+Current alpha: 9
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 4.24334e-008
+
+Current alpha: 9
+Max Flow: 25144
+Min cut (nodes in S side): 0
+Current gap: 2.12167e-008
+
+
+Dense subgraph found with 40 vertices:
+Vertices in dense subgraph: 0 1 2 3 4 5 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 63 85 86 92 93 101 131 133 148 173 180 196 600 631 653
+Edges in dense subgraph:
+Vertex 0 connected to: 1 2 3 4 5 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 63 85 86 92 93 101 131 133 148 173 180 196
+Vertex 1 connected to: 0 1 1 2 3 4 5 6 7 8 9 10 16 20 21 22 26 28 38 41 47 49 51 56 60 63 85 86 92 93 101 131 148 173 180 196 600 631
+Vertex 2 connected to: 0 1 3 4 5 6 7 8 9 16 20 21 22 24 26 28 38 41 47 49 51 56 60 63 85 86 92 93 101 131 133 148 173 180 196 631 653
+Vertex 3 connected to: 0 1 2 4 5 6 7 8 9 16 20 21 22 24 26 28 38 41 47 49 51 56 60 63 85 86 92 101 131 148 173 180 196 600 631 653
+Vertex 4 connected to: 0 1 2 3 5 6 8 10 16 20 22 24 26 38 41 47 51 56 60 85 86 92 101 131 133 148 180 196 631 653
+Vertex 5 connected to: 0 1 2 3 4 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 51 56 60 63 85 86 92 93 101 131 133 148 180 196 600 653
+Vertex 6 connected to: 0 1 2 3 4 5 6 6 7 8 9 10 16 20 21 22 24 38 41 47 49 51 56 60 63 85 86 92 93 101 131 133 148 173 180 196 631 653
+Vertex 7 connected to: 0 1 2 3 5 6 9 16 20 21 22 24 26 28 38 47 49 51 56 60 63 85 92 93 101 131 133 148 173 180 653
+Vertex 8 connected to: 0 1 2 3 4 5 6 8 8 9 10 21 22 24 26 47 56 60 63 92 93 101 131 148 173 180 631 653
+Vertex 9 connected to: 0 1 2 3 5 6 7 8 9 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 63 85 86 92 101 131 133 148 180 196 631 653
+Vertex 10 connected to: 0 1 4 5 6 8 9 10 10 22 24 26 41 101 131 133
+Vertex 16 connected to: 0 1 2 3 4 5 6 7 9 16 16 26 28 41
+Vertex 20 connected to: 0 1 2 3 4 5 6 7 9 41 47 49
+Vertex 21 connected to: 0 1 2 3 5 6 7 8 9 24 173 600
+Vertex 22 connected to: 0 1 2 3 4 5 6 7 8 9 10 28 47 600
+Vertex 24 connected to: 0 2 3 4 5 6 7 8 9 10 21 41 47 196 600
+Vertex 26 connected to: 0 1 2 3 4 5 7 8 9 10 16 28 38 41 47 173 196
+Vertex 28 connected to: 0 1 2 3 5 7 9 16 22 26 41 51 56 60 86 180 631
+Vertex 38 connected to: 0 1 2 3 4 5 6 7 9 26 38 38
+Vertex 41 connected to: 0 1 2 3 4 5 6 9 10 16 20 24 26 28 47 92 101 653
+Vertex 47 connected to: 0 1 2 3 4 5 6 7 8 9 20 22 24 26 41 47 47 49 92 173 653
+Vertex 49 connected to: 0 1 2 3 6 7 9 20 47 196 600
+Vertex 51 connected to: 0 1 2 3 4 5 6 7 9 28 51 51 600
+Vertex 56 connected to: 0 1 2 3 4 5 6 7 8 9 28 600
+Vertex 60 connected to: 0 1 2 3 4 5 6 7 8 9 28 60 60 101
+Vertex 63 connected to: 0 1 2 3 5 6 7 8 9 600
+Vertex 85 connected to: 0 1 2 3 4 5 6 7 9
+Vertex 86 connected to: 0 1 2 3 4 5 6 9 28 93 600
+Vertex 92 connected to: 0 1 2 3 4 5 6 7 8 9 41 47
+Vertex 93 connected to: 0 1 2 5 6 7 8 86 93 93 600
+Vertex 101 connected to: 0 1 2 3 4 5 6 7 8 9 10 41 60 133
+Vertex 131 connected to: 0 1 2 3 4 5 6 7 8 9 10 600
+Vertex 133 connected to: 0 2 4 5 6 7 9 10 101
+Vertex 148 connected to: 0 1 2 3 4 5 6 7 8 9 148 148
+Vertex 173 connected to: 0 1 2 3 6 7 8 21 26 47 173 173 600
+Vertex 180 connected to: 0 1 2 3 4 5 6 7 8 9 28 600
+Vertex 196 connected to: 0 1 2 3 4 5 6 9 24 26 49
+Vertex 600 connected to: 1 3 5 21 22 24 49 51 56 63 86 93 131 173 180 600 600 631
+Vertex 631 connected to: 1 2 3 4 6 8 9 28 600 631 631
+Vertex 653 connected to: 2 3 4 5 6 7 8 9 41 47 653 653
+Number of edges: 371
+Density: 0.475641
+Number of k-cliques in dense subgraph: 355
+Average k-cliques per vertex: 8.875
+
+
+```
+
+For k=3
+
+```bash
+
+Current alpha: 1023.5
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 1023.5
+
+Current alpha: 511.75
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 511.75
+
+Current alpha: 255.875
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 255.875
+
+Current alpha: 127.938
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 127.938
+
+Current alpha: 63.9688
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 63.9688
+
+Current alpha: 31.9844
+Max Flow: 19300
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 64 86 87 93 102 132 134 149 174 181 197 601 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6490 6494 6495 6496 6498 6500 6502 6512 6515 6521 6523 6525 6530 6534 6537 6559 6560 6566 6575 6605 6607 6622 6647 6654 6670 6853 6854 6855 6856 6857 6858 6859 6860 6861 6863 6866 6867 6868 6871 6872 6880 6882 6886 6888 6889 6891 6894 6897 6915 6916 6921 6924 6936 6945 6952 6955 6964 7086 8310 8311 8312 8313 8314 8315 8316 8318 8319 8320 8321 8322 8323 8324 8327 8328 8329 8331 8332 8333 8335 8337 8340 8341 8342 8345 8347 8348 8351 8353 8354 8356 8392 8594 8595 8596 8597 8598 8599 8601 8603 8604 8605 8606 8607 8609 8612 8613 8615 8617 8619 8622 8623 8624 8627 8628 8629 8631 8633 8636 8637 8639 8641 8657 8659 8719 8720 8721 8722 8724 8726 8727 8728 8729 8730 8731 8733 8735 8736 8737 8738 8739 8740 8741 8743 8744 8745 8746 8747 8755 8796 8797 8798 8799 8800 8802 8804 8805 8806 8807 8808 8810 8813 8814 8816 8817 8820 8821 8822 8824 8825 8826 8828 8831 8832 8834 8835 8837 8868 8870 8931 8932 8933 8934 8935 8938 8939 8940 8941 8945 8946 8948 8950 8951 8952 8955 8957 8964 8965 8966 8968 8974 8975 8977 8979 8981 8983 9029 9616 9620 9621 9622 9623 9625 9626 9627 9632 9634 9636 9637 9639 9641 9643 9649 9650 9652 9655 9656 9658 9661 9663 9696 10011 10012 10013 10014 10015 10016 10019 10020 10021 10022 10024 10026 10027 10028 10030 10031 10044 10113 10115 10118 10119 10120 10121 10123 10125 10130 10131 10133 10135 10136 10138 10141 10143 10150 10151 10155 10156 10166 10167 10170 10175 10178 10236 10855 10856 10857 10858 10859 10860 10861 10934 10935 10936 11010 11011 11012 11064 11067 11077 11167 11168 11193 11408 11409 11411 11414 11499 11500 11501 11502 11507 11510 11631 11632 11633 11635 11637 11640 11938 11939 11940 11990 12173 12174 12176 12189 12268 12270 12348 12456 12536 12727 12989 13042 13150 13228 13242
+Current gap: 31.9844
+
+Current alpha: 47.9766
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 15.9922
+
+Current alpha: 39.9805
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 7.99609
+
+Current alpha: 35.9824
+Max Flow: 19728
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 93 102 132 149 174 181 197 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6490 6494 6495 6496 6498 6500 6502 6512 6515 6521 6523 6525 6530 6534 6566 6575 6605 6622 6647 6654 6670 6853 6854 6855 6856 6857 6858 6859 6860 6861 6863 6866 6867 6868 6871 6872 6880 6882 6886 6888 6889 6891 6894 6921 6924 6936 6945 6952 6955 6964 8310 8311 8312 8313 8314 8315 8316 8318 8319 8320 8321 8322 8323 8324 8327 8328 8329 8331 8332 8333 8335 8342 8345 8347 8351 8353 8354 8356 8392 8594 8595 8596 8597 8598 8599 8601 8603 8604 8605 8606 8607 8609 8612 8613 8615 8617 8619 8622 8623 8629 8631 8633 8636 8637 8639 8641 8659 8719 8720 8721 8722 8724 8726 8727 8728 8729 8730 8731 8733 8735 8736 8737 8740 8741 8743 8745 8746 8747 8755 8796 8797 8798 8799 8800 8802 8804 8805 8806 8807 8808 8810 8813 8814 8816 8817 8820 8821 8826 8828 8831 8834 8835 8837 8870 8931 8932 8933 8934 8935 8938 8939 8940 8941 8945 8946 8948 8950 8951 8952 8955 8966 8968 8974 8977 8979 8981 8983 9029 9616 9620 9621 9622 9623 9625 9626 9627 9632 9634 9636 9637 9639 9641 9650 9652 9655 9658 9661 9663 9696 10011 10012 10013 10014 10015 10016 10019 10020 10021 10024 10026 10027 10028 10030 10031 10044 10113 10115 10118 10119 10120 10121 10123 10125 10130 10131 10133 10135 10136 10138 10141 10155 10156 10166 10170 10175 10178 10236 10855 10856 10857 10858 10859 10860 10934 10935 10936 11010 11011 11012 11064 11067 11167 11168 11408 11409 11411 11499 11500 11501 11502 11507 11510 11631 11632 11633 11635 11640 11938 11939 11940 11990 12173 12174 12176 12189 12268 12536
+Current gap: 3.99805
+
+Current alpha: 37.9814
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 1.99902
+
+Current alpha: 36.9819
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.999512
+
+Current alpha: 36.4822
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.499756
+
+Current alpha: 36.2323
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.249878
+
+Current alpha: 36.1074
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.124939
+
+Current alpha: 36.0449
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.0624695
+
+Current alpha: 36.0137
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.0312347
+
+Current alpha: 35.998
+Max Flow: 19728
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 93 102 132 149 174 181 197 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6490 6494 6495 6496 6498 6500 6502 6512 6515 6521 6523 6525 6530 6534 6566 6575 6605 6622 6647 6654 6670 6853 6854 6855 6856 6857 6858 6859 6860 6861 6863 6866 6867 6868 6871 6872 6880 6882 6886 6888 6889 6891 6894 6921 6924 6936 6945 6952 6955 6964 8310 8311 8312 8313 8314 8315 8316 8318 8319 8320 8321 8322 8323 8324 8327 8328 8329 8331 8332 8333 8335 8342 8345 8347 8351 8353 8354 8356 8392 8594 8595 8596 8597 8598 8599 8601 8603 8604 8605 8606 8607 8609 8612 8613 8615 8617 8619 8622 8623 8629 8631 8633 8636 8637 8639 8641 8659 8719 8720 8721 8722 8724 8726 8727 8728 8729 8730 8731 8733 8735 8736 8737 8740 8741 8743 8745 8746 8747 8755 8796 8797 8798 8799 8800 8802 8804 8805 8806 8807 8808 8810 8813 8814 8816 8817 8820 8821 8826 8828 8831 8834 8835 8837 8870 8931 8932 8933 8934 8935 8938 8939 8940 8941 8945 8946 8948 8950 8951 8952 8955 8966 8968 8974 8977 8979 8981 8983 9029 9616 9620 9621 9622 9623 9625 9626 9627 9632 9634 9636 9637 9639 9641 9650 9652 9655 9658 9661 9663 9696 10011 10012 10013 10014 10015 10016 10019 10020 10021 10024 10026 10027 10028 10030 10031 10044 10113 10115 10118 10119 10120 10121 10123 10125 10130 10131 10133 10135 10136 10138 10141 10155 10156 10166 10170 10175 10178 10236 10855 10856 10857 10858 10859 10860 10934 10935 10936 11010 11011 11012 11064 11067 11167 11168 11408 11409 11411 11499 11500 11501 11502 11507 11510 11631 11632 11633 11635 11640 11938 11939 11940 11990 12173 12174 12176 12189 12268 12536
+Current gap: 0.0156174
+
+Current alpha: 36.0058
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.00780869
+
+Current alpha: 36.0019
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.00390434
+
+Current alpha: 36
+Max Flow: 19728
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 93 102 132 149 174 181 197 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6490 6494 6495 6496 6498 6500 6502 6512 6515 6521 6523 6525 6530 6534 6566 6575 6605 6622 6647 6654 6670 6853 6854 6855 6856 6857 6858 6859 6860 6861 6863 6866 6867 6868 6871 6872 6880 6882 6886 6888 6889 6891 6894 6921 6924 6936 6945 6952 6955 6964 8310 8311 8312 8313 8314 8315 8316 8318 8319 8320 8321 8322 8323 8324 8327 8328 8329 8331 8332 8333 8335 8342 8345 8347 8351 8353 8354 8356 8392 8594 8595 8596 8597 8598 8599 8601 8603 8604 8605 8606 8607 8609 8612 8613 8615 8617 8619 8622 8623 8629 8631 8633 8636 8637 8639 8641 8659 8719 8720 8721 8722 8724 8726 8727 8728 8729 8730 8731 8733 8735 8736 8737 8740 8741 8743 8745 8746 8747 8755 8796 8797 8798 8799 8800 8802 8804 8805 8806 8807 8808 8810 8813 8814 8816 8817 8820 8821 8826 8828 8831 8834 8835 8837 8870 8931 8932 8933 8934 8935 8938 8939 8940 8941 8945 8946 8948 8950 8951 8952 8955 8966 8968 8974 8977 8979 8981 8983 9029 9616 9620 9621 9622 9623 9625 9626 9627 9632 9634 9636 9637 9639 9641 9650 9652 9655 9658 9661 9663 9696 10011 10012 10013 10014 10015 10016 10019 10020 10021 10024 10026 10027 10028 10030 10031 10044 10113 10115 10118 10119 10120 10121 10123 10125 10130 10131 10133 10135 10136 10138 10141 10155 10156 10166 10170 10175 10178 10236 10855 10856 10857 10858 10859 10860 10934 10935 10936 11010 11011 11012 11064 11067 11167 11168 11408 11409 11411 11499 11500 11501 11502 11507 11510 11631 11632 11633 11635 11640 11938 11939 11940 11990 12173 12174 12176 12189 12268 12536
+Current gap: 0.00195217
+
+Current alpha: 36.001
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.000976086
+
+Current alpha: 36.0005
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.000488043
+
+Current alpha: 36.0002
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.000244021
+
+Current alpha: 36.0001
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 0.000122011
+
+Current alpha: 36.0001
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 6.10054e-005
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 3.05027e-005
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 1.52513e-005
+
+Current alpha: 36
+Max Flow: 19728
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 93 102 132 149 174 181 197 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6490 6494 6495 6496 6498 6500 6502 6512 6515 6521 6523 6525 6530 6534 6566 6575 6605 6622 6647 6654 6670 6853 6854 6855 6856 6857 6858 6859 6860 6861 6863 6866 6867 6868 6871 6872 6880 6882 6886 6888 6889 6891 6894 6921 6924 6936 6945 6952 6955 6964 8310 8311 8312 8313 8314 8315 8316 8318 8319 8320 8321 8322 8323 8324 8327 8328 8329 8331 8332 8333 8335 8342 8345 8347 8351 8353 8354 8356 8392 8594 8595 8596 8597 8598 8599 8601 8603 8604 8605 8606 8607 8609 8612 8613 8615 8617 8619 8622 8623 8629 8631 8633 8636 8637 8639 8641 8659 8719 8720 8721 8722 8724 8726 8727 8728 8729 8730 8731 8733 8735 8736 8737 8740 8741 8743 8745 8746 8747 8755 8796 8797 8798 8799 8800 8802 8804 8805 8806 8807 8808 8810 8813 8814 8816 8817 8820 8821 8826 8828 8831 8834 8835 8837 8870 8931 8932 8933 8934 8935 8938 8939 8940 8941 8945 8946 8948 8950 8951 8952 8955 8966 8968 8974 8977 8979 8981 8983 9029 9616 9620 9621 9622 9623 9625 9626 9627 9632 9634 9636 9637 9639 9641 9650 9652 9655 9658 9661 9663 9696 10011 10012 10013 10014 10015 10016 10019 10020 10021 10024 10026 10027 10028 10030 10031 10044 10113 10115 10118 10119 10120 10121 10123 10125 10130 10131 10133 10135 10136 10138 10141 10155 10156 10166 10170 10175 10178 10236 10855 10856 10857 10858 10859 10860 10934 10935 10936 11010 11011 11012 11064 11067 11167 11168 11408 11409 11411 11499 11500 11501 11502 11507 11510 11631 11632 11633 11635 11640 11938 11939 11940 11990 12173 12174 12176 12189 12268 12536
+Current gap: 7.62567e-006
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 3.81283e-006
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 1.90642e-006
+
+Current alpha: 36
+Max Flow: 19728
+Min cut (nodes in S side): 0 1 2 3 4 5 6 7 8 9 10 11 17 21 22 23 25 27 29 39 42 48 50 52 57 61 93 102 132 149 174 181 197 654 6475 6476 6477 6478 6479 6480 6481 6482 6483 6484 6490 6494 6495 6496 6498 6500 6502 6512 6515 6521 6523 6525 6530 6534 6566 6575 6605 6622 6647 6654 6670 6853 6854 6855 6856 6857 6858 6859 6860 6861 6863 6866 6867 6868 6871 6872 6880 6882 6886 6888 6889 6891 6894 6921 6924 6936 6945 6952 6955 6964 8310 8311 8312 8313 8314 8315 8316 8318 8319 8320 8321 8322 8323 8324 8327 8328 8329 8331 8332 8333 8335 8342 8345 8347 8351 8353 8354 8356 8392 8594 8595 8596 8597 8598 8599 8601 8603 8604 8605 8606 8607 8609 8612 8613 8615 8617 8619 8622 8623 8629 8631 8633 8636 8637 8639 8641 8659 8719 8720 8721 8722 8724 8726 8727 8728 8729 8730 8731 8733 8735 8736 8737 8740 8741 8743 8745 8746 8747 8755 8796 8797 8798 8799 8800 8802 8804 8805 8806 8807 8808 8810 8813 8814 8816 8817 8820 8821 8826 8828 8831 8834 8835 8837 8870 8931 8932 8933 8934 8935 8938 8939 8940 8941 8945 8946 8948 8950 8951 8952 8955 8966 8968 8974 8977 8979 8981 8983 9029 9616 9620 9621 9622 9623 9625 9626 9627 9632 9634 9636 9637 9639 9641 9650 9652 9655 9658 9661 9663 9696 10011 10012 10013 10014 10015 10016 10019 10020 10021 10024 10026 10027 10028 10030 10031 10044 10113 10115 10118 10119 10120 10121 10123 10125 10130 10131 10133 10135 10136 10138 10141 10155 10156 10166 10170 10175 10178 10236 10855 10856 10857 10858 10859 10860 10934 10935 10936 11010 11011 11012 11064 11067 11167 11168 11408 11409 11411 11499 11500 11501 11502 11507 11510 11631 11632 11633 11635 11640 11938 11939 11940 11990 12173 12174 12176 12189 12268 12536
+Current gap: 9.53209e-007
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 4.76604e-007
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 2.38302e-007
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 1.19151e-007
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 5.95755e-008
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 2.97878e-008
+
+Current alpha: 36
+Max Flow: 19752
+Min cut (nodes in S side): 0
+Current gap: 1.48939e-008
+
+
+Dense subgraph found with 33 vertices:
+Vertices in dense subgraph: 0 1 2 3 4 5 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196 653
+Edges in dense subgraph:
+Vertex 0 connected to: 1 2 3 4 5 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 1 connected to: 0 1 1 2 3 4 5 6 7 8 9 10 16 20 21 22 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 2 connected to: 0 1 3 4 5 6 7 8 9 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196 653
+Vertex 3 connected to: 0 1 2 4 5 6 7 8 9 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196 653
+Vertex 4 connected to: 0 1 2 3 5 6 8 10 16 20 22 24 26 38 41 47 51 56 60 92 101 131 148 180 196 653
+Vertex 5 connected to: 0 1 2 3 4 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 51 56 60 92 101 131 148 180 196 653
+Vertex 6 connected to: 0 1 2 3 4 5 6 6 7 8 9 10 16 20 21 22 24 38 41 47 49 51 56 60 92 101 131 148 173 180 196 653
+Vertex 7 connected to: 0 1 2 3 5 6 9 16 20 21 22 24 26 28 38 47 49 51 56 60 92 101 131 148 173 180 653
+Vertex 8 connected to: 0 1 2 3 4 5 6 8 8 9 10 21 22 24 26 47 56 60 92 101 131 148 173 180 653
+Vertex 9 connected to: 0 1 2 3 5 6 7 8 9 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 180 196 653
+Vertex 10 connected to: 0 1 4 5 6 8 9 10 10 22 24 26 41 101 131
+Vertex 16 connected to: 0 1 2 3 4 5 6 7 9 16 16 26 28 41
+Vertex 20 connected to: 0 1 2 3 4 5 6 7 9 41 47 49
+Vertex 21 connected to: 0 1 2 3 5 6 7 8 9 24 173
+Vertex 22 connected to: 0 1 2 3 4 5 6 7 8 9 10 28 47
+Vertex 24 connected to: 0 2 3 4 5 6 7 8 9 10 21 41 47 196
+Vertex 26 connected to: 0 1 2 3 4 5 7 8 9 10 16 28 38 41 47 173 196
+Vertex 28 connected to: 0 1 2 3 5 7 9 16 22 26 41 51 56 60 180
+Vertex 38 connected to: 0 1 2 3 4 5 6 7 9 26 38 38
+Vertex 41 connected to: 0 1 2 3 4 5 6 9 10 16 20 24 26 28 47 92 101 653
+Vertex 47 connected to: 0 1 2 3 4 5 6 7 8 9 20 22 24 26 41 47 47 49 92 173 653
+Vertex 49 connected to: 0 1 2 3 6 7 9 20 47 196
+Vertex 51 connected to: 0 1 2 3 4 5 6 7 9 28 51 51
+Vertex 56 connected to: 0 1 2 3 4 5 6 7 8 9 28
+Vertex 60 connected to: 0 1 2 3 4 5 6 7 8 9 28 60 60 101
+Vertex 92 connected to: 0 1 2 3 4 5 6 7 8 9 41 47
+Vertex 101 connected to: 0 1 2 3 4 5 6 7 8 9 10 41 60
+Vertex 131 connected to: 0 1 2 3 4 5 6 7 8 9 10
+Vertex 148 connected to: 0 1 2 3 4 5 6 7 8 9 148 148
+Vertex 173 connected to: 0 1 2 3 6 7 8 21 26 47 173 173
+Vertex 180 connected to: 0 1 2 3 4 5 6 7 8 9 28
+Vertex 196 connected to: 0 1 2 3 4 5 6 9 24 26 49
+Vertex 653 connected to: 2 3 4 5 6 7 8 9 41 47 653 653
+Number of edges: 300
+Density: 0.568182
+Number of k-cliques in dense subgraph: 1185
+Average k-cliques per vertex: 35.9091
+
+
+```
+
+For k=4
+
+```bash
+
+Current alpha: 1029.5
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 1029.5
+Current gap: 1029.5
+
+Current alpha: 514.75
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 514.75
+Current gap: 514.75
+
+Current alpha: 257.375
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 257.375
+Current gap: 257.375
+
+Current alpha: 128.688
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 128.688
+Current gap: 128.688
+
+Current alpha: 64.3438
+Max Flow: 19708
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 64.3438
+Current gap: 64.3438
+
+Current alpha: 96.5156
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 96.5156
+Current gap: 32.1719
+
+Current alpha: 80.4297
+Max Flow: 21901
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 80.4297
+Current gap: 16.0859
+
+Current alpha: 88.4727
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 88.4727
+Current gap: 8.04297
+
+Current alpha: 84.4512
+Max Flow: 22429
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 84.4512
+Current gap: 4.02148
+
+Current alpha: 86.4619
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 86.4619
+Current gap: 2.01074
+
+Current alpha: 85.4565
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.4565
+Current gap: 1.00537
+
+Current alpha: 84.9539
+Max Flow: 22495
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 84.9539
+Current gap: 0.502686
+
+Current alpha: 85.2052
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.2052
+Current gap: 0.251343
+
+Current alpha: 85.3309
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.3309
+Current gap: 0.125671
+
+Current alpha: 85.268
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.268
+Current gap: 0.0628357
+
+Current alpha: 85.2366
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.2366
+Current gap: 0.0314178
+
+Current alpha: 85.2523
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.2523
+Current gap: 0.0157089
+
+Current alpha: 85.2445
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.2445
+Current gap: 0.00785446
+
+Current alpha: 85.2484
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.2484
+Current gap: 0.00392723
+
+Current alpha: 85.2504
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.2504
+Current gap: 0.00196362
+
+Current alpha: 85.2494
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.2494
+Current gap: 0.000981808
+
+Current alpha: 85.2499
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.2499
+Current gap: 0.000490904
+
+Current alpha: 85.2501
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.2501
+Current gap: 0.000245452
+
+Current alpha: 85.25
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.25
+Current gap: 0.000122726
+
+Current alpha: 85.2501
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.2501
+Current gap: 6.1363e-005
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 3.06815e-005
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 1.53407e-005
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 7.67037e-006
+
+Current alpha: 85.25
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.25
+Current gap: 3.83519e-006
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 1.91759e-006
+
+Current alpha: 85.25
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.25
+Current gap: 9.58797e-007
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 4.79398e-007
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 2.39699e-007
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 1.1985e-007
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 5.99248e-008
+
+Current alpha: 85.25
+Max Flow: 22528
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 85.25
+Current gap: 2.99624e-008
+
+Current alpha: 85.25
+Max Flow: 22544
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 85.25
+Current gap: 1.49812e-008
+
+
+Dense subgraph found with 32 vertices:
+Vertices in dense subgraph: 0 1 2 3 4 5 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Edges in dense subgraph:
+Vertex 0 connected to: 1 2 3 4 5 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 1 connected to: 0 1 1 2 3 4 5 6 7 8 9 10 16 20 21 22 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 2 connected to: 0 1 3 4 5 6 7 8 9 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 3 connected to: 0 1 2 4 5 6 7 8 9 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 4 connected to: 0 1 2 3 5 6 8 10 16 20 22 24 26 38 41 47 51 56 60 92 101 131 148 180 196
+Vertex 5 connected to: 0 1 2 3 4 6 7 8 9 10 16 20 21 22 24 26 28 38 41 47 51 56 60 92 101 131 148 180 196
+Vertex 6 connected to: 0 1 2 3 4 5 6 6 7 8 9 10 16 20 21 22 24 38 41 47 49 51 56 60 92 101 131 148 173 180 196
+Vertex 7 connected to: 0 1 2 3 5 6 9 16 20 21 22 24 26 28 38 47 49 51 56 60 92 101 131 148 173 180
+Vertex 8 connected to: 0 1 2 3 4 5 6 8 8 9 10 21 22 24 26 47 56 60 92 101 131 148 173 180
+Vertex 9 connected to: 0 1 2 3 5 6 7 8 9 9 10 16 20 21 22 24 26 28 38 41 47 49 51 56 60 92 101 131 148 180 196
+Vertex 10 connected to: 0 1 4 5 6 8 9 10 10 22 24 26 41 101 131
+Vertex 16 connected to: 0 1 2 3 4 5 6 7 9 16 16 26 28 41
+Vertex 20 connected to: 0 1 2 3 4 5 6 7 9 41 47 49
+Vertex 21 connected to: 0 1 2 3 5 6 7 8 9 24 173
+Vertex 22 connected to: 0 1 2 3 4 5 6 7 8 9 10 28 47
+Vertex 24 connected to: 0 2 3 4 5 6 7 8 9 10 21 41 47 196
+Vertex 26 connected to: 0 1 2 3 4 5 7 8 9 10 16 28 38 41 47 173 196
+Vertex 28 connected to: 0 1 2 3 5 7 9 16 22 26 41 51 56 60 180
+Vertex 38 connected to: 0 1 2 3 4 5 6 7 9 26 38 38
+Vertex 41 connected to: 0 1 2 3 4 5 6 9 10 16 20 24 26 28 47 92 101
+Vertex 47 connected to: 0 1 2 3 4 5 6 7 8 9 20 22 24 26 41 47 47 49 92 173
+Vertex 49 connected to: 0 1 2 3 6 7 9 20 47 196
+Vertex 51 connected to: 0 1 2 3 4 5 6 7 9 28 51 51
+Vertex 56 connected to: 0 1 2 3 4 5 6 7 8 9 28
+Vertex 60 connected to: 0 1 2 3 4 5 6 7 8 9 28 60 60 101
+Vertex 92 connected to: 0 1 2 3 4 5 6 7 8 9 41 47
+Vertex 101 connected to: 0 1 2 3 4 5 6 7 8 9 10 41 60
+Vertex 131 connected to: 0 1 2 3 4 5 6 7 8 9 10
+Vertex 148 connected to: 0 1 2 3 4 5 6 7 8 9 148 148
+Vertex 173 connected to: 0 1 2 3 6 7 8 21 26 47 173 173
+Vertex 180 connected to: 0 1 2 3 4 5 6 7 8 9 28
+Vertex 196 connected to: 0 1 2 3 4 5 6 9 24 26 49
+Number of edges: 289
+Density: 0.582661
+Number of k-cliques in dense subgraph: 2724
+Average k-cliques per vertex: 85.125
+
+
+```
+
+#### As733 (Closest to specified)
+
+For k=2
+
+```bash
+
+Current alpha: 207.5
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 207.5
+Current gap: 207.5
+
+Current alpha: 103.75
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 103.75
+Current gap: 103.75
+
+Current alpha: 51.875
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 51.875
+Current gap: 51.875
+
+Current alpha: 25.9375
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 25.9375
+Current gap: 25.9375
+
+Current alpha: 12.9688
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 12.9688
+Current gap: 12.9688
+
+Current alpha: 6.48438
+Max Flow: 6084
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 6.48438
+Current gap: 6.48438
+
+Current alpha: 9.72656
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 9.72656
+Current gap: 3.24219
+
+Current alpha: 8.10547
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.10547
+Current gap: 1.62109
+
+Current alpha: 8.91602
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.91602
+Current gap: 0.810547
+
+Current alpha: 8.51074
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.51074
+Current gap: 0.405273
+
+Current alpha: 8.30811
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.30811
+Current gap: 0.202637
+
+Current alpha: 8.40942
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.40942
+Current gap: 0.101318
+
+Current alpha: 8.46008
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.46008
+Current gap: 0.0506592
+
+Current alpha: 8.48541
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.48541
+Current gap: 0.0253296
+
+Current alpha: 8.49808
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.49808
+Current gap: 0.0126648
+
+Current alpha: 8.50441
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.50441
+Current gap: 0.0063324
+
+Current alpha: 8.50124
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.50124
+Current gap: 0.0031662
+
+Current alpha: 8.49966
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.49966
+Current gap: 0.0015831
+
+Current alpha: 8.50045
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.50045
+Current gap: 0.00079155
+
+Current alpha: 8.50006
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.50006
+Current gap: 0.000395775
+
+Current alpha: 8.49986
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.49986
+Current gap: 0.000197887
+
+Current alpha: 8.49996
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.49996
+Current gap: 9.89437e-005
+
+Current alpha: 8.50001
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.50001
+Current gap: 4.94719e-005
+
+Current alpha: 8.49998
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.49998
+Current gap: 2.47359e-005
+
+Current alpha: 8.49999
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.49999
+Current gap: 1.2368e-005
+
+Current alpha: 8.5
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.5
+Current gap: 6.18398e-006
+
+Current alpha: 8.5
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.5
+Current gap: 3.09199e-006
+
+Current alpha: 8.5
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.5
+Current gap: 1.546e-006
+
+Current alpha: 8.5
+Max Flow: 6256
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 8.5
+Current gap: 7.72998e-007
+
+Current alpha: 8.5
+Max Flow: 6264
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 8.5
+Current gap: 3.86499e-007
+
+
+Dense subgraph found with 30 vertices:
+Vertices in dense subgraph: 486 499 605 660 691 726 735 760 780 786 788 801 833 837 846 852 854 865 870 879 888 900 924 940 951 960 973 1034 1273 1361
+Edges in dense subgraph:
+Vertex 486 connected to: 486 486 660 660 691 691 735 735 786 786 837 837 870 870 888 888 924 924 1273 1273
+Vertex 499 connected to: 605 605 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 605 connected to: 499 499 660 660 691 691 726 726 735 735 788 788 801 801 846 846 852 852 865 865 870 870 879 879 888 888 900 900 924 924 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 660 connected to: 486 486 605 605 660 660 726 726 735 735 780 780 786 786 833 833 852 852 854 854 865 865 870 870 879 879 888 888 900 900 940 940 951 951 973 973 1034 1034 1273 1273 1361 1361
+Vertex 691 connected to: 486 486 499 499 605 605 780 780 786 786 788 788 801 801 833 833 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 951 951 960 960 1273 1273 1361 1361
+Vertex 726 connected to: 605 605 660 660 735 735 760 760 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 735 connected to: 486 486 499 499 605 605 660 660 726 726 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 760 connected to: 726 726 735 735 786 786 837 837 846 846 865 865 879 879 888 888 900 900 924 924 1273 1273
+Vertex 780 connected to: 660 660 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1034 1034 1273 1273
+Vertex 786 connected to: 486 486 499 499 660 660 691 691 726 726 735 735 760 760 780 780 786 786 788 788 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 788 connected to: 605 605 691 691 786 786 837 837 852 852 854 854 870 870 879 879 1273 1273
+Vertex 801 connected to: 605 605 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 833 connected to: 660 660 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 837 connected to: 486 486 499 499 726 726 735 735 760 760 780 780 786 786 788 788 801 801 833 833 846 846 852 852 865 865 870 870 879 879 888 888 900 900 940 940 951 951 960 960 973 973 1273 1273 1361 1361
+Vertex 846 connected to: 605 605 691 691 735 735 760 760 786 786 837 837 865 865 870 870 879 879 888 888 924 924 1273 1273 1361 1361
+Vertex 852 connected to: 605 605 660 660 691 691 735 735 786 786 788 788 837 837 854 854 865 865 870 870 879 879 888 888 924 924 1273 1273
+Vertex 854 connected to: 660 660 691 691 786 786 788 788 852 852 865 865 870 870 879 879 888 888 900 900 973 973 1034 1034 1361 1361
+Vertex 865 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1273 1273 1361 1361
+Vertex 870 connected to: 486 486 499 499 605 605 660 660 691 691 726 726 735 735 780 780 786 786 788 788 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273
+Vertex 879 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 788 788 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 888 connected to: 486 486 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 900 connected to: 605 605 660 660 691 691 735 735 760 760 786 786 837 837 854 854 865 865 870 870 879 879 888 888 1273 1273
+Vertex 924 connected to: 486 486 605 605 735 735 760 760 786 786 846 846 852 852 865 865 870 870 879 879 888 888 1273 1273 1361 1361
+Vertex 940 connected to: 660 660 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 951 connected to: 605 605 660 660 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 951 951 1273 1273
+Vertex 960 connected to: 605 605 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 960 960 1273 1273 1361 1361
+Vertex 973 connected to: 605 605 660 660 735 735 786 786 837 837 854 854 865 865 870 870 879 879 888 888 1273 1273
+Vertex 1034 connected to: 605 605 660 660 735 735 780 780 786 786 854 854 870 870 879 879 888 888 1273 1273
+Vertex 1273 connected to: 486 486 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 788 788 801 801 833 833 837 837 846 846 852 852 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1361 1361
+Vertex 1361 connected to: 605 605 660 660 691 691 735 735 786 786 837 837 846 846 854 854 865 865 879 879 888 888 924 924 960 960 1273 1273
+Number of edges: 495
+Density: 1.13793
+Number of k-cliques in dense subgraph: 244
+Average k-cliques per vertex: 8.13333
+Execution time: 58623 milliseconds
+
+
+```
+
+For k=3
+
+```bash
+
+Current alpha: 320
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 320
+Current gap: 320
+
+Current alpha: 160
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 160
+Current gap: 160
+
+Current alpha: 80
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 80
+Current gap: 80
+
+Current alpha: 40
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 40
+Current gap: 40
+
+Current alpha: 20
+Max Flow: 6417
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 20
+Current gap: 20
+
+Current alpha: 30
+Max Flow: 7413
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 30
+Current gap: 10
+
+Current alpha: 35
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 35
+Current gap: 5
+
+Current alpha: 32.5
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 32.5
+Current gap: 2.5
+
+Current alpha: 31.25
+Max Flow: 7497
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 31.25
+Current gap: 1.25
+
+Current alpha: 31.875
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.875
+Current gap: 0.625
+
+Current alpha: 31.5625
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.5625
+Current gap: 0.3125
+
+Current alpha: 31.4062
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.4062
+Current gap: 0.15625
+
+Current alpha: 31.3281
+Max Flow: 7497
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 31.3281
+Current gap: 0.078125
+
+Current alpha: 31.3672
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3672
+Current gap: 0.0390625
+
+Current alpha: 31.3477
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3477
+Current gap: 0.0195312
+
+Current alpha: 31.3379
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3379
+Current gap: 0.00976562
+
+Current alpha: 31.333
+Max Flow: 7497
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 31.333
+Current gap: 0.00488281
+
+Current alpha: 31.3354
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3354
+Current gap: 0.00244141
+
+Current alpha: 31.3342
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3342
+Current gap: 0.0012207
+
+Current alpha: 31.3336
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3336
+Current gap: 0.000610352
+
+Current alpha: 31.3333
+Max Flow: 7497
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 31.3333
+Current gap: 0.000305176
+
+Current alpha: 31.3335
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3335
+Current gap: 0.000152588
+
+Current alpha: 31.3334
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3334
+Current gap: 7.62939e-005
+
+Current alpha: 31.3334
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3334
+Current gap: 3.8147e-005
+
+Current alpha: 31.3333
+Max Flow: 7497
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 31.3333
+Current gap: 1.90735e-005
+
+Current alpha: 31.3333
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3333
+Current gap: 9.53674e-006
+
+Current alpha: 31.3333
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3333
+Current gap: 4.76837e-006
+
+Current alpha: 31.3333
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3333
+Current gap: 2.38419e-006
+
+Current alpha: 31.3333
+Max Flow: 7497
+Min cut (nodes in S side): Vertices in source side: Some vertices in source side, updating l to 31.3333
+Current gap: 1.19209e-006
+
+Current alpha: 31.3333
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3333
+Current gap: 5.96046e-007
+
+Current alpha: 31.3333
+Max Flow: 7509
+Min cut (nodes in S side): Vertices in source side: No vertices in source side, updating u to 31.3333
+Current gap: 2.98023e-007
+
+
+Dense subgraph found with 28 vertices:
+Vertices in dense subgraph: 499 605 660 691 726 735 760 780 786 801 833 837 846 852 854 865 870 879 888 900 924 940 951 960 973 1034 1273 1361
+Edges in dense subgraph:
+Vertex 499 connected to: 605 605 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 605 connected to: 499 499 660 660 691 691 726 726 735 735 801 801 846 846 852 852 865 865 870 870 879 879 888 888 900 900 924 924 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 660 connected to: 605 605 660 660 726 726 735 735 780 780 786 786 833 833 852 852 854 854 865 865 870 870 879 879 888 888 900 900 940 940 951 951 973 973 1034 1034 1273 1273 1361 1361
+Vertex 691 connected to: 499 499 605 605 780 780 786 786 801 801 833 833 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 951 951 960 960 1273 1273 1361 1361
+Vertex 726 connected to: 605 605 660 660 735 735 760 760 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 735 connected to: 499 499 605 605 660 660 726 726 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 760 connected to: 726 726 735 735 786 786 837 837 846 846 865 865 879 879 888 888 900 900 924 924 1273 1273
+Vertex 780 connected to: 660 660 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1034 1034 1273 1273
+Vertex 786 connected to: 499 499 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 801 connected to: 605 605 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 833 connected to: 660 660 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 837 connected to: 499 499 726 726 735 735 760 760 780 780 786 786 801 801 833 833 846 846 852 852 865 865 870 870 879 879 888 888 900 900 940 940 951 951 960 960 973 973 1273 1273 1361 1361
+Vertex 846 connected to: 605 605 691 691 735 735 760 760 786 786 837 837 865 865 870 870 879 879 888 888 924 924 1273 1273 1361 1361
+Vertex 852 connected to: 605 605 660 660 691 691 735 735 786 786 837 837 854 854 865 865 870 870 879 879 888 888 924 924 1273 1273
+Vertex 854 connected to: 660 660 691 691 786 786 852 852 865 865 870 870 879 879 888 888 900 900 973 973 1034 1034 1361 1361
+Vertex 865 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1273 1273 1361 1361
+Vertex 870 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273
+Vertex 879 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 888 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 854 854 865 865 870 870 879 879 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1273 1273 1361 1361
+Vertex 900 connected to: 605 605 660 660 691 691 735 735 760 760 786 786 837 837 854 854 865 865 870 870 879 879 888 888 1273 1273
+Vertex 924 connected to: 605 605 735 735 760 760 786 786 846 846 852 852 865 865 870 870 879 879 888 888 1273 1273 1361 1361
+Vertex 940 connected to: 660 660 735 735 786 786 837 837 865 865 870 870 879 879 888 888 1273 1273
+Vertex 951 connected to: 605 605 660 660 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 951 951 1273 1273
+Vertex 960 connected to: 605 605 691 691 735 735 786 786 837 837 865 865 870 870 879 879 888 888 960 960 1273 1273 1361 1361
+Vertex 973 connected to: 605 605 660 660 735 735 786 786 837 837 854 854 865 865 870 870 879 879 888 888 1273 1273
+Vertex 1034 connected to: 605 605 660 660 735 735 780 780 786 786 854 854 870 870 879 879 888 888 1273 1273
+Vertex 1273 connected to: 499 499 605 605 660 660 691 691 726 726 735 735 760 760 780 780 786 786 801 801 833 833 837 837 846 846 852 852 865 865 870 870 879 879 888 888 900 900 924 924 940 940 951 951 960 960 973 973 1034 1034 1361 1361
+Vertex 1361 connected to: 605 605 660 660 691 691 735 735 786 786 837 837 846 846 854 854 865 865 879 879 888 888 924 924 960 960 1273 1273
+Number of edges: 458
+Density: 1.21164
+Number of k-cliques in dense subgraph: 872
+Average k-cliques per vertex: 31.1429
+Execution time: 192001 milliseconds
 
 ```
 
